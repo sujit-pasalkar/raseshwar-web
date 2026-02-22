@@ -1,0 +1,814 @@
+<!-- Topbar -->
+<!-- <header class="h-9 absolute left-0 right-0 top-0 flex justify-between items-center py-5 px-5 bg-[#f2efec] text-sm text-gray-600 z-9"> 
+    <div class="flex gap-2 ">
+        <i class="pi pi-facebook"></i>
+        <span class="pi pi-instagram"></span>
+        <span class="pi pi-whatsapp"></span>
+        <span class="pi pi-linkedin"></span>
+    </div>
+    <div class="flex gap-4 items-center">
+        <span class="pi pi-phone"></span>
+        <span class="">+91 7972241516 / +91 9820241516</span>
+    </div>
+</header> -->
+
+<!-- Navbar -->
+<div
+    class="absolute left-0 right-0 top-0 shadow-[2px_4px_22px_0px_rgba(0,0,0,0.04)] bg-white p-3 mx-auto max-w-[1170px] z-9 rounded-b-[30px] bg-primary">
+    <div class="container">
+        <div class="grid grid-cols-12 items-center">
+            <div class="lg:col-span-2 md:col-span-4 sm:col-span-5 col-span-6">
+                <div class="ayur-menu-logo">
+                    <a>
+                        <!-- todo: replace with our logo path -->
+                        <img
+                            src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/Logo.png"></a>
+                </div>
+            </div>
+            <div class="lg:col-span-10 md:col-span-8 sm:col-span-7 col-span-6">
+                <div class="flex items-center justify-end text-end">
+                    <!--desktop nav list  -->
+                    <div class="ayur-nav-menu lg:block hidden">
+                        <ul>
+                            <!-- todo: add your section link connection here -->
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <button #menuBtn class="relative w-8 h-8 focus:outline-none cursor-pointer lg:hidden block"
+                        (click)="toggleSidebar()">
+                        <span
+                            class="block absolute h-0.75 w-8 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line1 style="top:8px"></span>
+                        <span
+                            class="block absolute h-0.75 w-6.5 ml-1.5 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line2 style="top:16px"></span>
+                        <span
+                            class="block absolute h-0.75 w-8 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line3 style="top:24px"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sidebar -->
+<div #sidebar
+    class="fixed top-0 left-[-220px] w-55 h-full bg-white shadow-lg transition-all duration-300 z-40 pt-7 pl-14">
+
+    <ul class="space-y-6 text-lg font-semibold flex flex-col gap-4">
+        <li><a href="#" class="hover:text-green-600">Home</a></li>
+        <li><a href="#" class="hover:text-green-600">About</a></li>
+        <li><a href="#" class="hover:text-green-600">Services</a></li>
+        <li><a href="#" class="hover:text-green-600">Portfolio</a></li>
+        <li><a href="#" class="hover:text-green-600">Contact</a></li>
+    </ul>
+
+</div>
+
+<!-- Home banner -->
+<div class="ayur-banner-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="ayur-banner-heading">
+                    <h1>We Are Here To Give You The Best <span>Herb Products</span> </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    <a href="shop.html"
+                        class="inline-block min-w-36.25 rounded-[22px] bg-[#cd8973] min-h-11.25 border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">Shop
+                        Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ayur-banner-slider-sec">
+                    <div class="swiper ayur-banner-slider swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress"
+                        swiper_scale_active>
+                        <div class="swiper-wrapper style-KoAzC" id="swiper-wrapper-e483e3baa3c9f9d8" aria-live="off">
+                            <div class="swiper-slide style-Twwhs" role="group" aria-label="1 / 5"
+                                data-swiper-slide-index="0" id="style-Twwhs">
+                                <div class="ayur-ban-slide">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-head-Image.png"
+                                        alt="headerimage">
+                                </div>
+                            </div>
+                            <div class="swiper-slide style-IplhS" role="group" aria-label="2 / 5"
+                                data-swiper-slide-index="1" id="style-IplhS">
+                                <div class="ayur-ban-slide">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-head-Image.png"
+                                        alt="headerimage">
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-prev style-p1dR9" role="group"
+                                aria-label="3 / 5" data-swiper-slide-index="2" id="style-p1dR9">
+                                <div class="ayur-ban-slide">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-head-Image.png"
+                                        alt="headerimage">
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active style-xTomx"
+                                role="group" aria-label="4 / 5" data-swiper-slide-index="3" id="style-xTomx">
+                                <div class="ayur-ban-slide">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-head-Image.png"
+                                        alt="headerimage">
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-visible swiper-slide-next style-YiU7l" role="group"
+                                aria-label="5 / 5" data-swiper-slide-index="4" id="style-YiU7l">
+                                <div class="ayur-ban-slide">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-head-Image.png"
+                                        alt="headerimage">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                            aria-controls="swiper-wrapper-e483e3baa3c9f9d8">
+                            <svg width="46" height="22" viewBox="0 0 46 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.520424 9.74414L0.522022 9.74245L9.79254 0.51664C10.4871 -0.174498 11.6104 -0.171926 12.3017 0.522671C12.9929 1.21718 12.9903 2.34051 12.2958 3.03174L6.07152 9.22581H43.6452C44.6251 9.22581 45.4194 10.0201 45.4194 11C45.4194 11.9799 44.6251 12.7742 43.6452 12.7742H6.07161L12.2957 18.9683C12.9902 19.6595 12.9928 20.7828 12.3016 21.4773C11.6103 22.172 10.4869 22.1744 9.79245 21.4834L0.521931 12.2575L0.520336 12.2559C-0.17453 11.5623 -0.17231 10.4354 0.520424 9.74414Z"
+                                    fill="#F6F1ED" />
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                            aria-controls="swiper-wrapper-e483e3baa3c9f9d8">
+                            <svg width="46" height="22" viewBox="0 0 46 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M44.899 9.74414L44.8974 9.74245L35.6269 0.51664C34.9324 -0.174498 33.8091 -0.171926 33.1177 0.522671C32.4265 1.21718 32.4292 2.34051 33.1237 3.03174L39.3479 9.22581H1.77419C0.794307 9.22581 0 10.0201 0 11C0 11.9799 0.794307 12.7742 1.77419 12.7742H39.3478L33.1238 18.9683C32.4293 19.6595 32.4266 20.7828 33.1178 21.4773C33.8091 22.172 34.9326 22.1744 35.627 21.4834L44.8975 12.2575L44.8991 12.2559C45.594 11.5623 45.5917 10.4354 44.899 9.74414Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ayur-ban-leaf">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-leafleft.png"
+            alt="leaf-image">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/ban-leafright.png"
+            alt="leaf-image">
+    </div>
+</div>
+
+<!-- section - Diseases we treat and specialize treatments  -->
+<section>
+    <div class="flex flex-col items-center justify-center py-10">
+        <!-- <h5></h5> -->
+        <h1 style="color: var(--ayur-banheading-color)">Diseases We <span>Treat</span> </h1>
+        <!-- new Corousel section-->
+        <div class="card">
+            <p-carousel [value]="products()" [numVisible]="6" [numScroll]="6" [circular]="false"
+                [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
+                <ng-template let-product #item>
+                    <div class="p-4 flex flex-col items-center justify-center">
+                        <div class="p-2">
+                            <img src="corousel/{{product.imageId}}.png" [alt]="product.name" class="rounded-border" />
+                        </div>
+                        <h3>{{product.name}}</h3>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <!-- <h3>Specialized Treatments</h3> -->
+        </div>
+    </div>
+</section>
+
+<!-- Corousel section -->
+<!-- <div class="container-fluid">
+    <div class="ayur-care-slider-sec">
+        <div class="swiper ayur-care-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <div class="swiper-wrapper" id="swiper-wrapper-4db35366f1a1087f5" aria-live="polite">
+                <div class="swiper-slide swiper-slide-active style-91NlM" role="group" aria-label="1 / 10"
+                    data-swiper-slide-index="0" id="style-91NlM">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img gen-TFP-ayur-banne gen-vzN-ayur-banne">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img1.png"
+                                alt="img">
+                        </div>
+                        <h3>Eye Care</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-next style-BMy3I" role="group" aria-label="2 / 10"
+                    data-swiper-slide-index="1" id="style-BMy3I">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img2.png"
+                                alt="img">
+                        </div>
+                        <h3>Hair Care</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-V5Pna" role="group" aria-label="3 / 10" data-swiper-slide-index="2"
+                    id="style-V5Pna">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img3.png"
+                                alt="img">
+                        </div>
+                        <h3>Skin Care</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-YUVdo" role="group" aria-label="4 / 10" data-swiper-slide-index="3"
+                    id="style-YUVdo">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img4.png"
+                                alt="img">
+                        </div>
+                        <h3>Men's Health</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-op8La" role="group" aria-label="5 / 10" data-swiper-slide-index="4"
+                    id="style-op8La">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img5.png"
+                                alt="img">
+                        </div>
+                        <h3>Women's Health</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-nSBre" role="group" aria-label="6 / 10" data-swiper-slide-index="5"
+                    id="style-nSBre">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img6.png"
+                                alt="img">
+                        </div>
+                        <h3>Memory Health</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-49137" role="group" aria-label="7 / 10" data-swiper-slide-index="6"
+                    id="style-49137">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img7.png"
+                                alt="img">
+                        </div>
+                        <h3>Beauty</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-Rqx2Q" role="group" aria-label="8 / 10" data-swiper-slide-index="7"
+                    id="style-Rqx2Q">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img8.png"
+                                alt="img">
+                        </div>
+                        <h3>Brain Health</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-GgmBW" role="group" aria-label="9 / 10" data-swiper-slide-index="8"
+                    id="style-GgmBW">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img1.png"
+                                alt="img">
+                        </div>
+                        <h3>Eye Care</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide style-IgIyT" role="group" aria-label="10 / 10" data-swiper-slide-index="9"
+                    id="style-IgIyT">
+                    <div class="ayur-careslide-box">
+                        <div class="ayur-careslider-img">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img2.png"
+                                alt="img">
+                        </div>
+                        <h3>Hair Care</h3>
+                    </div>
+                </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+            aria-controls="swiper-wrapper-4db35366f1a1087f5">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20 0C31.0284 0 40 8.97164 40 20C40 31.0284 31.0284 40 20 40C8.97164 40 0 31.0284 0 20C0 8.97164 8.97164 0 20 0ZM13.8216 21.1784L22.155 29.5116C22.3096 29.6666 22.4932 29.7896 22.6955 29.8734C22.8977 29.9572 23.1145 30.0002 23.3334 30C23.5523 30.0002 23.769 29.9572 23.9712 29.8733C24.1735 29.7895 24.3571 29.6666 24.5117 29.5116C25.1634 28.86 25.1634 27.8066 24.5117 27.155L17.3566 20L24.5116 12.845C25.1633 12.1934 25.1633 11.14 24.5116 10.4884C23.86 9.83672 22.8066 9.83672 22.155 10.4884L13.8216 18.8217C13.17 19.4734 13.17 20.5266 13.8216 21.1784Z"
+                    fill="#D6CDCA" />
+            </svg>
+        </div>
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+            aria-controls="swiper-wrapper-4db35366f1a1087f5">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20 0C8.97164 0 0 8.97164 0 20C0 31.0284 8.97164 40 20 40C31.0284 40 40 31.0284 40 20C40 8.97164 31.0284 0 20 0ZM26.1784 21.1784L17.845 29.5116C17.6904 29.6666 17.5068 29.7896 17.3045 29.8734C17.1023 29.9572 16.8855 30.0002 16.6666 30C16.4477 30.0002 16.231 29.9572 16.0288 29.8733C15.8265 29.7895 15.6429 29.6666 15.4883 29.5116C14.8366 28.86 14.8366 27.8066 15.4883 27.155L22.6434 20L15.4884 12.845C14.8367 12.1934 14.8367 11.14 15.4884 10.4884C16.14 9.83672 17.1934 9.83672 17.845 10.4884L26.1784 18.8217C26.83 19.4734 26.83 20.5266 26.1784 21.1784Z"
+                    fill="#CD8973" />
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- section 3 -->
+<div class="ayur-bgcover ayur-topproduct-sec snipcss-Sw8KX">
+    <div class="container">
+        <div class="flex flex-row flex-wrap items-center justify-center text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="ayur-heading-wrap">
+                    <h5>Medicine</h5>
+                    <h3>Our Top Products</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row flex-wrap space-y-0">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img1.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale">
+                            <p>Sale</p>
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)" class="ayur-tpor-click">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike gen-jj6-ayur-ban-s">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Black Organic Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p class="gen-8yO-ayur-cares"><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img2.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale ayur-tpro-sale-off">
+                            <p>30% Off</p>
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)" class="ayur-tpor-click">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Loose Leaf Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img3.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale ayur-tpro-sale-star">
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Oolong Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img4.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale ayur-tpro-sale-star">
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)" class="ayur-tpor-click">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Black Organic Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img5.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale ayur-tpro-sale-star">
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)" class="ayur-tpor-click">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Green Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="ayur-tpro-box">
+                    <div class="ayur-tpro-img">
+                        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img6.png"
+                            alt="img">
+                        <div class="ayur-tpro-sale ayur-tpro-sale-trend">
+                            <p>Trending</p>
+                            <div class="ayur-tpro-like">
+                                <a href="javascript:void(0)" class="ayur-tpor-click">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like.svg"
+                                        class="unlike">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/like-fill.svg"
+                                        class="like">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ayur-tpro-text">
+                        <h3><a href="shop-single.html">Sencha Tea</a></h3>
+                        <div class="ayur-tpro-price">
+                            <p><del>$100</del>$50</p>
+                            <div class="ayur-tpro-star">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/star-icon.png"
+                                    alt="star">
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="ayur-tpro-btn">
+                            <a href="cart.html"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                <span>
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.826087 2.39643e-08C0.606995 2.39643e-08 0.396877 0.0870339 0.241955 0.241955C0.0870339 0.396877 0 0.606995 0 0.826087C0 1.04518 0.0870339 1.2553 0.241955 1.41022C0.396877 1.56514 0.606995 1.65217 0.826087 1.65217H2.29652C2.4166 1.65238 2.53358 1.69029 2.63096 1.76054C2.72834 1.8308 2.8012 1.92986 2.83926 2.04374L5.56287 10.2162C5.6843 10.5797 5.69917 10.9696 5.60665 11.3413L5.38278 12.2393C5.05317 13.5561 6.07835 14.8696 7.43478 14.8696H17.3478C17.5669 14.8696 17.777 14.7825 17.932 14.6276C18.0869 14.4727 18.1739 14.2626 18.1739 14.0435C18.1739 13.8244 18.0869 13.6143 17.932 13.4593C17.777 13.3044 17.5669 13.2174 17.3478 13.2174H7.43478C7.11261 13.2174 6.90609 12.953 6.98457 12.6416L7.15391 11.9659C7.18244 11.8516 7.24833 11.7501 7.34112 11.6775C7.43391 11.6049 7.54828 11.5654 7.66609 11.5652H16.5217C16.6953 11.5654 16.8646 11.511 17.0055 11.4095C17.1463 11.3081 17.2517 11.1649 17.3065 11.0002L19.508 4.39148C19.5494 4.26729 19.5607 4.13505 19.5409 4.00566C19.5211 3.87626 19.4709 3.75342 19.3943 3.64725C19.3178 3.54108 19.2171 3.45463 19.1005 3.39501C18.984 3.33539 18.855 3.30432 18.7241 3.30435H5.415C5.29478 3.30431 5.17762 3.26649 5.08007 3.19622C4.98253 3.12595 4.90954 3.0268 4.87143 2.91278L4.0883 0.565043C4.03349 0.400482 3.92828 0.257348 3.78757 0.15593C3.64686 0.0545128 3.4778 -4.17427e-05 3.30435 2.39643e-08H0.826087ZM6.6087 15.6957C6.17051 15.6957 5.75028 15.8697 5.44043 16.1796C5.13059 16.4894 4.95652 16.9096 4.95652 17.3478C4.95652 17.786 5.13059 18.2062 5.44043 18.5161C5.75028 18.8259 6.17051 19 6.6087 19C7.04688 19 7.46712 18.8259 7.77696 18.5161C8.0868 18.2062 8.26087 17.786 8.26087 17.3478C8.26087 16.9096 8.0868 16.4894 7.77696 16.1796C7.46712 15.8697 7.04688 15.6957 6.6087 15.6957ZM16.5217 15.6957C16.0836 15.6957 15.6633 15.8697 15.3535 16.1796C15.0436 16.4894 14.8696 16.9096 14.8696 17.3478C14.8696 17.786 15.0436 18.2062 15.3535 18.5161C15.6633 18.8259 16.0836 19 16.5217 19C16.9599 19 17.3802 18.8259 17.69 18.5161C17.9998 18.2062 18.1739 17.786 18.1739 17.3478C18.1739 16.9096 17.9998 16.4894 17.69 16.1796C17.3802 15.8697 16.9599 15.6957 16.5217 15.6957Z"
+                                            fill="white" />
+                                    </svg>
+                                </span> Add to Cart </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="ayur-tpro-viewbtn">
+                    <a href="shop.html"
+                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">View
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ayur-bgshape ayur-tpro-bgshape">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/bg-shape1.png"
+            alt="img">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/bg-leaf1.png"
+            alt="img">
+    </div>
+</div>
+
+<!-- section 4 -->
+<div class="ayur-bgcover ayur-about-sec snipcss-D6bDZ">
+    <div class="container">
+        <div class="grid grid-cols-12">
+            <div class="sm:col-span-12 md:col-span-12 lg:col-span-6">
+                <div class="ayur-about-img">
+                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/about-img.png"
+                        alt="img" data-tilt data-tilt-max="10" data-tilt-speed="1000" data-tilt-perspective="1000"
+                        id="style-XhoBs" class="style-XhoBs">
+                    <div class="ayur-about-exp">
+                        <p>10</p>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:col-span-12 md:col-span-12 lg:col-span-6">
+                <div class="ayur-heading-wrap ayur-about-head">
+                    <h5>Who We Are</h5>
+                    <h3>The Natural Way To Achieving Balance And Optimal Health</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <a href="about.html"
+                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ayur-bgshape ayur-about-bgshape">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/bg-shape2.png"
+            alt="img">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/bg-leaf2.png"
+            alt="img">
+    </div>
+</div>
+
+<!-- section 5 -->
+<div class="ayur-bgcover ayur-achievement-sec snipcss-Qhy7k">
+    <div class="container">
+        <div class="grid grid-cols-12 align-items-center">
+            <div class="sm:col-span-12 md:col-span-12 lg:col-span-4">
+                <div class="ayur-heading-wrap ayur-heading-left">
+                    <h5>Our Recent Achievements</h5>
+                    <h3>Benefit From Choosing The Best</h3>
+                </div>
+            </div>
+            <div>
+                add yours
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="ayur-footer-section snipcss-tKBhA">
+    <div class="container">
+        <div class="ayur-sign-sec">
+            <div class="grid grid-cols-12 align-items-center">
+                <div class="lg:col-span-4 md:col-span-4 sm:col-span-12">
+                    <div class="ayur-sign-head">
+                        <h3>Sign Up To Get Updates &amp; News About Us..</h3>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 md:col-span-8 sm:col-span-12">
+                    <form method class="ayur-subscribe-sec">
+                        <div class="ayur-form-input">
+                            <input type="email" class="form-control" placeholder="Enter Your Email..." name="email">
+                        </div>
+                        <div class="ayur-form-btn">
+                            <a href="javascript:void(0)"
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%] gen-Mg7-ayur-cares">Subscribe</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="ayur-footer-sec">
+            <div class="grid grid-cols-12">
+                <div class="lg:col-span-4 md:col-span-6 sm:col-span-6">
+                    <div class="ayur-footer-logosec">
+                        <div class="ayur-footer-logo">
+                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/footer-logo.svg"
+                                alt="logo">
+                        </div>
+                        <p>Amet minim mollit non deserunt ullamco est sit Velit officia consequat duis enim velit
+                            mollit. sunt nostrud amet. Excepteur sint occaecat.</p>
+                        <ul class="ayur-social-link">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.74157 20V10.8777H9.80231L10.2615 7.32156H6.74157V5.05147C6.74157 4.0222 7.02622 3.32076 8.50386 3.32076L10.3854 3.31999V0.13923C10.06 0.0969453 8.94308 0 7.64308 0C4.92848 0 3.07002 1.65697 3.07002 4.69927V7.32156H0V10.8777H3.07002V20H6.74157Z"
+                                            fill="#E4D4CF" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.8138 8.46864L19.0991 0H17.3727L11.0469 7.3532L5.9944 0H0.166992L7.8073 11.1193L0.166992 20H1.89349L8.57377 12.2348L13.9095 20H19.7369L11.8133 8.46864H11.8138ZM9.4491 11.2173L8.67498 10.1101L2.51557 1.29967H5.16736L10.1381 8.40994L10.9122 9.51718L17.3735 18.7594H14.7218L9.4491 11.2177V11.2173Z"
+                                            fill="#E4D4CF" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.89667 0C3.41417 0.000833333 0.5 3.51333 0.5 7.34333C0.5 9.11917 1.4925 11.335 3.08167 12.0375C3.535 12.2417 3.475 11.9925 3.865 10.5008C3.88295 10.4406 3.88454 10.3766 3.8696 10.3156C3.85466 10.2545 3.82374 10.1985 3.78 10.1533C1.50833 7.52583 3.33667 2.12417 8.5725 2.12417C16.15 2.12417 14.7342 12.6092 9.89083 12.6092C8.6425 12.6092 7.7125 11.6292 8.00667 10.4167C8.36333 8.9725 9.06167 7.42 9.06167 6.37917C9.06167 3.75583 5.15333 4.145 5.15333 7.62083C5.15333 8.695 5.53333 9.42 5.53333 9.42C5.53333 9.42 4.27583 14.5 4.0425 15.4492C3.6475 17.0558 4.09583 19.6567 4.135 19.8808C4.15917 20.0042 4.2975 20.0433 4.375 19.9417C4.49917 19.7792 6.01917 17.6108 6.445 16.0433C6.6 15.4725 7.23583 13.1558 7.23583 13.1558C7.655 13.9125 8.86333 14.5458 10.1508 14.5458C13.9808 14.5458 16.7492 11.1792 16.7492 7.00167C16.7358 2.99667 13.3083 0 8.89667 0Z"
+                                            fill="#E4D4CF" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.4996 0H5.49988C2.75019 0 0.5 2.25019 0.5 4.99988V15.0001C0.5 17.7491 2.75019 20 5.49988 20H15.4996C18.2493 20 20.4995 17.7491 20.4995 15.0001V4.99988C20.4995 2.25019 18.2493 0 15.4996 0ZM18.8328 15.0001C18.8328 16.8376 17.3381 18.3333 15.4996 18.3333H5.49988C3.66218 18.3333 2.16671 16.8376 2.16671 15.0001V4.99988C2.16671 3.16193 3.66218 1.66671 5.49988 1.66671H15.4996C17.3381 1.66671 18.8328 3.16193 18.8328 4.99988V15.0001Z"
+                                            fill="#E4D4CF" />
+                                        <path
+                                            d="M15.9172 5.83295C16.6075 5.83295 17.1672 5.27332 17.1672 4.58298C17.1672 3.89264 16.6075 3.33301 15.9172 3.33301C15.2269 3.33301 14.6672 3.89264 14.6672 4.58298C14.6672 5.27332 15.2269 5.83295 15.9172 5.83295Z"
+                                            fill="#E4D4CF" />
+                                        <path
+                                            d="M10.4999 5C7.73793 5 5.5 7.23818 5.5 9.99988C5.5 12.7606 7.73793 15.0002 10.4999 15.0002C13.261 15.0002 15.4998 12.7606 15.4998 9.99988C15.4998 7.23818 13.261 5 10.4999 5ZM10.4999 13.3335C8.65915 13.3335 7.16671 11.8411 7.16671 9.99988C7.16671 8.15866 8.65915 6.66671 10.4999 6.66671C12.3406 6.66671 13.833 8.15866 13.833 9.99988C13.833 11.8411 12.3406 13.3335 10.4999 13.3335Z"
+                                            fill="#E4D4CF" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 md:col-span-6 sm:col-span-6">
+                    <div class="ayur-footer-box">
+                        <h4>Useful Links</h4>
+                        <ul class="ayur-links">
+                            <li><a href="javascript:void(0)">Shipping Options</a></li>
+                            <li><a href="wishlist.html">My Wishlist</a></li>
+                            <li><a href="profile.html">My Account</a></li>
+                            <li><a href="javascript:void(0)">Return Policy</a></li>
+                            <li><a href="javascript:void(0)">Shopping FAQss</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 md:col-span-6 sm:col-span-6">
+                    <div class="ayur-footer-box">
+                        <h4>Contact Info</h4>
+                        <ul class="ayur-contact-list">
+                            <li class="ayur-contact-box">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/location.png"
+                                    alt="icon">
+                                <p>4517 Washington Ave. <br> Manchester, Kentucky 39495</p>
+                            </li>
+                            <li class="ayur-contact-box">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/mobile.png"
+                                    alt="icon">
+                                <p>(208) 555-0112</p>
+                            </li>
+                            <li class="ayur-contact-box">
+                                <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/email.png"
+                                    alt="icon">
+                                <p>example@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 md:col-span-6 sm:col-span-6 px-0">
+                    <div class="ayur-footer-box">
+                        <h4>Recent Blog</h4>
+                        <ul class="ayur-recent-blog">
+                            <li class="ayur-recentblog-box gen-f5v-ayur-tpro-">
+                                <div class="ayur-recentblog-boximg">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/footer-blog1.png"
+                                        alt="image">
+                                </div>
+                                <div class="ayur-recentblog-text">
+                                    <p class="date">Jun 10,2024</p>
+                                    <h3 class="text">Amet minim mollit non deserunt est sit Velit officia consequat.
+                                    </h3>
+                                </div>
+                            </li>
+                            <li class="ayur-recentblog-box">
+                                <div class="ayur-recentblog-boximg">
+                                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/footer-blog2.png"
+                                        alt="image">
+                                </div>
+                                <div class="ayur-recentblog-text">
+                                    <p class="date">Jun 10,2024</p>
+                                    <h3 class="text">Amet minim mollit non deserunt est sit Velit officia consequat.
+                                    </h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-12">
+            <div class="lg:col-span-12 md:col-span-12 sm:col-span-12 col-12">
+                <div class="ayur-copyright-para">
+                    <p>Copyright © 2026. All Right Reserved.&nbsp;Raseshwar Ayurveda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ayur-bgshape ayur-footer-bgshape">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/footer-left.png"
+            alt="img">
+        <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/footer-right.png"
+            alt="img">
+    </div>
+</div>
