@@ -60,28 +60,40 @@ export class Home implements AfterViewInit, OnInit {
       },
       {
         imageId: 'care-img2',
-        name: 'Product 2',
+        name: 'Hair Care',
       },
       {
         imageId: 'care-img3',
-        name: 'Product 3',
+        name: 'Skin Care',
       },
       {
         imageId: 'care-img5',
-        name: 'Product 5',
+        name: "Liver Disorders",
+      },
+      {
+        imageId: 'mens-health',
+        name: "Heart Disease",
       },
       {
         imageId: 'care-img6',
-        name: 'Product 6',
+        name: 'Memory Health',
       },
       {
         imageId: 'care-img7',
-        name: 'Product 7',
+        name: 'Diabetes',
       },
       {
         imageId: 'care-img8',
-        name: 'Product 8',
+        name: 'Urinary Disorder / Urinary Disease',
       },
+      {
+        imageId: 'care-img8',
+        name: 'Kidney Disorders',
+      },
+      {
+        imageId: 'care-img8',
+        name: 'Obesity',
+      }
     ]);
   }
 
