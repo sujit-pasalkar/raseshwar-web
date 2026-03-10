@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Ayurveda – Treatment Sections</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green-dark: #2d5016;
+            --green-mid: #4a7c2f;
+            --green-light: #7aad4a;
+            --gold: #c8a96e;
+            --gold-light: #e8d5a3;
+            --cream: #faf6ee;
+            --cream-dark: #f0e8d4;
+            --text-dark: #2a2a1e;
+            --text-mid: #5a5a3e;
+            --text-light: #8a8a6a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.65;
+        }
+
+        .section {
+            padding: 90px 0 80px;
+        }
+
+        .section-alt {
+            background: var(--cream-dark);
+        }
+
+        .section-dark {
+            background: var(--green-dark);
+            color: var(--cream);
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .sec-head {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .sec-head .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .sec-head h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            color: var(--green-dark);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .section-dark .sec-head h2 {
+            color: var(--gold-light);
+        }
+
+        .sec-head p {
+            font-size: 15px;
+            color: var(--text-mid);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .section-dark .sec-head p {
+            color: #c8d4b0;
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 14px 0 0;
+        }
+
+        .ornament span {
+            display: block;
+            height: 1px;
+            width: 60px;
+            background: var(--gold);
+        }
+
+        .ornament svg {
+            fill: var(--gold);
+        }
+
+        /* ── SECTION 1 ── */
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .disease-card {
+            background: var(--white);
+            border: 1px solid #e0d6bf;
+            border-radius: 8px;
+            padding: 32px 22px 28px;
+            text-align: center;
+            transition: transform .3s, box-shadow .3s, border-color .3s;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .disease-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green-mid), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .35s ease;
+        }
+
+        .disease-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(45, 80, 22, .12);
+            border-color: var(--gold);
+        }
+
+        .disease-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .disease-card .icon-wrap {
+            width: 64px;
+            height: 64px;
+            background: var(--cream-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            transition: background .3s;
+        }
+
+        .disease-card:hover .icon-wrap {
+            background: var(--green-dark);
+        }
+
+        .disease-card .icon-wrap svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--green-mid);
+            transition: fill .3s;
+        }
+
+        .disease-card:hover .icon-wrap svg {
+            fill: var(--gold);
+        }
+
+        .disease-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+            transition: color .3s;
+        }
+
+        .disease-card:hover h3 {
+            color: var(--green-mid);
+        }
+
+        .disease-card p {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ── SECTION 2 ── */
+        .treatment-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        @media(max-width: 800px) {
+            .treatment-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .treat-category {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px 28px;
+            border: 1px solid #e0d6bf;
+            transition: box-shadow .3s;
+        }
+
+        .treat-category:hover {
+            box-shadow: 0 10px 32px rgba(45, 80, 22, .1);
+        }
+
+        .treat-cat-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .cat-icon {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cat-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--gold-light);
+        }
+
+        .treat-cat-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--green-dark);
+            line-height: 1.3;
+        }
+
+        .treat-cat-header .cat-badge {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .treat-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .treat-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        .treat-list li::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 7px;
+        }
+
+        .treat-list li span.num {
+            color: var(--green-mid);
+            font-weight: 600;
+            font-size: 12px;
+            min-width: 28px;
+        }
+
+        .treat-banner {
+            grid-column: 1 / -1;
+            background: linear-gradient(120deg, var(--green-dark) 0%, #3a6a1e 100%);
+            border-radius: 10px;
+            padding: 30px 36px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--cream);
+        }
+
+        .treat-banner-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(200, 169, 110, .15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .treat-banner-icon svg {
+            fill: var(--gold);
+            width: 30px;
+            height: 30px;
+        }
+
+        .treat-banner h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: var(--gold-light);
+            margin-bottom: 5px;
+        }
+
+        .treat-banner p {
+            font-size: 14px;
+            color: #b8cca0;
+            line-height: 1.6;
+        }
+
+        /* ── SECTION 3 ── */
+        .pancha-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 22px;
+        }
+
+        .pancha-card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(200, 169, 110, .25);
+            border-radius: 10px;
+            padding: 28px 20px 24px;
+            text-align: center;
+            transition: background .3s, border-color .3s, transform .3s;
+            cursor: default;
+        }
+
+        .pancha-card:hover {
+            background: rgba(200, 169, 110, .1);
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .pancha-card .p-num {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .pancha-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+
+        .pancha-card p {
+            font-size: 12.5px;
+            color: #a0b888;
+            line-height: 1.55;
+        }
+
+        @media(max-width: 600px) {
+            .disease-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .treat-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pancha-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ SECTION 1 : DISEASES WE TREAT ══ -->
+    <section class="section">
+        <div class="container">
+            <div class="sec-head">
+                <span class="eyebrow">Holistic Healing</span>
+                <h2>Diseases We Treat</h2>
+                <div class="ornament">
+                    <span></span>
+                    <svg width="18" height="18" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+                        <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" />
+                    </svg>
+                    <span></span>
+                </div>
+                <p>Rooted in the wisdom of ancient Ayurveda, we offer time-tested treatments for a wide spectrum of
+                    health conditions — restoring balance to body, mind, and spirit.</p>
+            </div>
+
+            <div class="disease-grid">
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                        </svg>
+                    </div>
+                    <h3>Eye Care</h3>
+                    <p>Ayurvedic therapies for vision health, eye strain & ocular disorders.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.29 0-2.15.16-2.89.36C14.2 12.82 16.15 10.19 17 8z" />
+                        </svg>
+                    </div>
+                    <h3>Skin Care</h3>
+                    <p>Natural remedies for eczema, psoriasis, acne & skin rejuvenation.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C9.93 2 8.5 3.57 8.5 5.5c0 .16.01.31.03.46C7.03 6.78 6 8.27 6 10c0 3.31 2.69 6 6 6s6-2.69 6-6c0-1.73-1.03-3.22-2.53-4.04.02-.15.03-.3.03-.46C15.5 3.57 14.07 2 12 2zm0 2c.83 0 1.5.67 1.5 1.5S12.83 7 12 7s-1.5-.67-1.5-1.5S11.17 4 12 4zM9 20h6v2H9zm1-4h4v3h-4z" />
+                        </svg>
+                    </div>
+                    <h3>Diabetes</h3>
+                    <p>Herbal formulations & lifestyle guidance to regulate blood sugar levels.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 3c-2.81 0-5.19 1.5-6.5 3.78.95-.78 2.3-1.28 3.75-1.28 1.95 0 3.65.87 4.75 2.22.78-.93 1.94-1.5 3.25-1.5.44 0 .87.07 1.27.2A7.5 7.5 0 0 0 12 7z" />
+                        </svg>
+                    </div>
+                    <h3>Hair Care</h3>
+                    <p>Treatments for hair fall, dandruff & scalp health using Ayurvedic oils.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm-2-4h-4V6h4v2z" />
+                        </svg>
+                    </div>
+                    <h3>Liver Disorders</h3>
+                    <p>Detox therapies & herbal support for fatty liver, hepatitis & more.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <h3>Heart Disease</h3>
+                    <p>Cardio-protective herbs & therapies for a healthy heart & circulation.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18c0-.55-.45-1-1-1s-1 .45-1 1v1.93C7.06 19.43 4.57 16.94 4.07 14H6c.55 0 1-.45 1-1s-.45-1-1-1H4.07C4.57 8.06 7.06 5.57 10 5.07V7c0 .55.45 1 1 1s1-.45 1-1V5.07c2.94.5 5.43 2.99 5.93 5.93H16c-.55 0-1 .45-1 1s.45 1 1 1h1.93c-.5 2.94-2.99 5.43-5.93 5.93z" />
+                        </svg>
+                    </div>
+                    <h3>Urinary Disorders</h3>
+                    <p>Natural solutions for UTIs, kidney stones & urinary tract health.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.66 7.93 12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1l4.24 4.25C17.38 10.48 18 11.99 18 13.59s-.62 3.11-1.76 4.24C15.11 18.97 13.6 19.59 12 19.59z" />
+                        </svg>
+                    </div>
+                    <h3>Kidney Disorders</h3>
+                    <p>Herbal protocols to support kidney function & renal wellness.</p>
+                </div>
+
+                <div class="disease-card">
+                    <div class="icon-wrap">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9 1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z" />
+                        </svg>
+                    </div>
+                    <h3>Obesity</h3>
+                    <p>Panchakarma & Ayurvedic diet therapies for healthy weight management.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ SECTION 2 : SPECIALIZED TREATMENTS ══ -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="sec-head">
+                <span class="eyebrow">Ancient Wisdom, Modern Care</span>
+                <h2>Surgical &amp; Scriptural Ayurvedic Treatments</h2>
+                <div class="ornament">
+                    <span></span>
+                    <svg width="18" height="18" viewBox="0 0 24 24">
+                        <path
+                            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.29 0-2.15.16-2.89.36C14.2 12.82 16.15 10.19 17 8z" />
+                    </svg>
+                    <span></span>
+                </div>
+                <p>Comprehensive guidance and treatment protocols rooted in classical Ayurvedic texts — addressing the
+                    root cause of disease, not just the symptoms.</p>
+            </div>
+
+            <div class="treatment-layout">
+
+                <div class="treat-banner">
+                    <div class="treat-banner-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Classical Ayurvedic Treatment &amp; Guidance</h3>
+                        <p>Every treatment is personalised according to your Prakriti (constitution) and the principles
+                            of Tridosha — Vata, Pitta &amp; Kapha — ensuring holistic and lasting healing.</p>
+                    </div>
+                </div>
+
+                <div class="treat-category">
+                    <div class="treat-cat-header">
+                        <div class="cat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L9 8.3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="cat-badge">Vata Disorders</span>
+                            <h3>Neurological &amp; Musculoskeletal</h3>
+                        </div>
+                    </div>
+                    <ul class="treat-list">
+                        <li><span class="num">1.1</span> Rheumatoid Arthritis (Amavata)</li>
+                        <li><span class="num">1.2</span> Osteoarthritis (Sandhigata Vata)</li>
+                        <li><span class="num">1.3</span> Gout / Gouty Arthritis (Vatarakta)</li>
+                        <li><span class="num">1.4</span> Spinal Disorders – Back &amp; Neck Issues</li>
+                    </ul>
+                </div>
+
+                <div class="treat-category">
+                    <div class="treat-cat-header">
+                        <div class="cat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2a5.5 5.5 0 0 0 0 11 5.5 5.5 0 0 0 0-11zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-7 4h14v2H5zm0 4h14v2H5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="cat-badge">Pitta Disorders</span>
+                            <h3>Digestive &amp; Metabolic</h3>
+                        </div>
+                    </div>
+                    <ul class="treat-list">
+                        <li><span class="num">2.1</span> Hyperacidity (Amlapitta)</li>
+                        <li><span class="num">2.2</span> Bleeding Disorders (Raktapitta)</li>
+                    </ul>
+                </div>
+
+                <div class="treat-category">
+                    <div class="treat-cat-header">
+                        <div class="cat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8.07-15.03-8.07-15.03 0h15.03zM1.02 17h15v2h-15z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="cat-badge">Digestive Disorders</span>
+                            <h3>Gut &amp; Digestive Health</h3>
+                        </div>
+                    </div>
+                    <ul class="treat-list">
+                        <li><span class="num">3.1</span> Indigestion (Ajirna)</li>
+                        <li><span class="num">3.2</span> Piles / Hemorrhoids (Mulvyadh)</li>
+                    </ul>
+                </div>
+
+                <div class="treat-category">
+                    <div class="treat-cat-header">
+                        <div class="cat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="cat-badge">Women's Health</span>
+                            <h3>Gynecological Disorders</h3>
+                        </div>
+                    </div>
+                    <ul class="treat-list">
+                        <li><span class="num">4.1</span> Menstrual Complaints</li>
+                        <li><span class="num">4.2</span> Infertility (Vandhyatva)</li>
+                        <li><span class="num">4.3</span> PCOD – Polycystic Ovarian Disease</li>
+                        <li><span class="num">4.4</span> Garbhasanskar – Antenatal Care &amp; Education</li>
+                    </ul>
+                </div>
+
+                <div class="treat-category">
+                    <div class="treat-cat-header">
+                        <div class="cat-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 13h-2v-6h2v6zm0-8h-2V5h2v2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="cat-badge">Children's Health</span>
+                            <h3>Pediatric Disorders</h3>
+                        </div>
+                    </div>
+                    <ul class="treat-list">
+                        <li><span class="num">5.1</span> Suvarnaprashan – Ayurvedic Immunization for Children</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ SECTION 3 : PANCHAKARMA FACILITIES ══ -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="sec-head">
+                <span class="eyebrow">Classical Detoxification</span>
+                <h2>Available Panchakarma Facilities</h2>
+                <div class="ornament">
+                    <span></span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)">
+                        <path
+                            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.29 0-2.15.16-2.89.36C14.2 12.82 16.15 10.19 17 8z" />
+                    </svg>
+                    <span></span>
+                </div>
+                <p>Panchakarma — the five-fold Ayurvedic purification — eliminates deep-seated toxins and restores the
+                    body's natural healing intelligence. We offer the full classical spectrum.</p>
+            </div>
+
+            <div class="pancha-grid">
+
+                <div class="pancha-card">
+                    <div class="p-num">01</div>
+                    <h3>Snehana</h3>
+                    <p>Oleation & therapeutic oil massage to lubricate and prepare body tissues.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">02</div>
+                    <h3>Svedana</h3>
+                    <p>Sudation / steam therapy to open channels and expel metabolic waste.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">03</div>
+                    <h3>Vamana</h3>
+                    <p>Therapeutic emesis to eliminate Kapha and upper digestive toxins.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">04</div>
+                    <h3>Virechana</h3>
+                    <p>Therapeutic purgation for deep Pitta cleansing and liver detoxification.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">05</div>
+                    <h3>Basti</h3>
+                    <p>Medicated enema therapy — the most potent Vata-pacifying Panchakarma.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">06</div>
+                    <h3>Nasya</h3>
+                    <p>Nasal administration of medicated oils for head, neck & sensory organs.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">07</div>
+                    <h3>Raktamokshana</h3>
+                    <p>Bloodletting therapy to purify blood and treat Pitta-related skin conditions.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">08</div>
+                    <h3>Shirodhara</h3>
+                    <p>Continuous warm oil pouring on the forehead — deeply calming for the nervous system.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">09</div>
+                    <h3>Kati Basti</h3>
+                    <p>Warm oil pooling treatment for lower back pain & lumbar disorders.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">10</div>
+                    <h3>Janu Basti</h3>
+                    <p>Medicated oil retention therapy for knee joint pain and arthritis.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">11</div>
+                    <h3>Manya Basti</h3>
+                    <p>Therapeutic oil pooling for neck and cervical region disorders.</p>
+                </div>
+
+                <div class="pancha-card">
+                    <div class="p-num">12</div>
+                    <h3>Hrid Basti</h3>
+                    <p>Heart region treatment with warm medicated oils for cardio-pulmonary wellness.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { Test } from '../../services/test';
 
 @Component({
   selector: 'app-home',
@@ -17,19 +18,21 @@ export class Home implements AfterViewInit, OnInit {
   @ViewChild('line2') l2!: ElementRef;
   @ViewChild('line3') l3!: ElementRef;
 
-  // btn = document.getElementById('menuBtn');
-  // sidebar = document.getElementById('sidebar');
-  // overlay = document.getElementById('overlay');
-
-  // l1 = document.getElementById('line1');
-  // l2 = document.getElementById('line2');
-  // l3 = document.getElementById('line3');
-
   open = false;
   responsiveOptions: any[] | undefined;
   products = signal<{ imageId: string; name: string }[]>([]);
 
+  //custom corousle
+  carouselOffset = 1;
+
+   // number of items per slide, maybe 6? adjust accordingly
+   itemsPerSlide = 1;
+
+   testService  = inject(Test);
+
   ngOnInit() {
+
+    this.callApi();
     this.responsiveOptions = [
       {
         breakpoint: '1400px',
@@ -38,7 +41,7 @@ export class Home implements AfterViewInit, OnInit {
       },
       {
         breakpoint: '1199px',
-        numVisible: 6,
+        numVisible: 5,
         numScroll: 1,
       },
       {
@@ -48,7 +51,7 @@ export class Home implements AfterViewInit, OnInit {
       },
       {
         breakpoint: '575px',
-        numVisible: 3,
+        numVisible: 1,
         numScroll: 1,
       },
     ];
@@ -68,11 +71,11 @@ export class Home implements AfterViewInit, OnInit {
       },
       {
         imageId: 'care-img5',
-        name: "Liver Disorders",
+        name: "Women's Health",
       },
       {
         imageId: 'mens-health',
-        name: "Heart Disease",
+        name: "Men's Health",
       },
       {
         imageId: 'care-img6',
@@ -80,20 +83,20 @@ export class Home implements AfterViewInit, OnInit {
       },
       {
         imageId: 'care-img7',
-        name: 'Diabetes',
+        name: 'Skin Care',
       },
-      {
-        imageId: 'care-img8',
-        name: 'Urinary Disorder / Urinary Disease',
-      },
-      {
-        imageId: 'care-img8',
-        name: 'Kidney Disorders',
-      },
-      {
-        imageId: 'care-img8',
-        name: 'Obesity',
-      }
+      // {
+      //   imageId: 'care-img8',
+      //   name: 'Urinary Disorder / Urinary Disease',
+      // },
+      // {
+      //   imageId: 'care-img8',
+      //   name: 'Kidney Disorders',
+      // },
+      // {
+      //   imageId: 'obesity_cartoon_edited',
+      //   name: 'Obesity',
+      // }
     ]);
   }
 
@@ -130,4 +133,27 @@ export class Home implements AfterViewInit, OnInit {
       }
     });
   }
+
+  //custom carousel functions
+  nextSlide() {
+     const total = this.products().length;
+     const maxOffset = Math.max(0, total - this.itemsPerSlide);
+     this.carouselOffset = Math.min(this.carouselOffset + 100, maxOffset * (100/this.itemsPerSlide));
+   }
+
+   prevSlide() {
+     this.carouselOffset = Math.max(0, this.carouselOffset - 100);
+   }
+
+
+   callApi(){
+    this.testService.testAPI().subscribe({
+      next: (response) => {
+        console.log('API Response:', response);
+      },
+      error: (error) => {
+        console.error('API Error:', error);
+      }
+    });
+   }
 }
