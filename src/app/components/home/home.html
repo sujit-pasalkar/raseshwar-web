@@ -1,4 +1,5 @@
-<!-- Topbar -->
+<!-- section 1 - Topbar -->
+<!-- todo: add into TopbarComponent -->
 <!-- <header class="h-9 absolute left-0 right-0 top-0 flex justify-between items-center py-5 px-5 bg-[#f2efec] text-sm text-gray-600 z-9"> 
     <div class="flex gap-2 ">
         <i class="pi pi-facebook"></i>
@@ -12,7 +13,8 @@
     </div>
 </header> -->
 
-<!-- Navbar -->
+<!-- section 2 - Navbar -->
+<!-- todo: add into NavbarComponent -->
 <div
     class="absolute left-0 right-0 top-0 shadow-[2px_4px_22px_0px_rgba(0,0,0,0.04)] bg-white p-3 mx-auto max-w-292.5 z-9 rounded-b-[30px] bg-primary">
     <div class="container">
@@ -59,7 +61,8 @@
 </div>
 
 
-<!-- Sidebar -->
+<!-- section 3 - Sidebar -->
+<!-- todo: add into SidebarComponent -->
 <div #sidebar class="fixed top-0 -left-55 w-55 h-full bg-white shadow-lg transition-all duration-300 z-40 pt-7 pl-14">
 
     <ul class="space-y-6 text-lg font-semibold flex flex-col gap-4">
@@ -72,18 +75,19 @@
 
 </div>
 
-<!-- Home banner -->
-<div class="ayur-banner-section  bg-center bg-cover bg-no-repeat" style="background-image: url('/banner-bg.png');">
+<!-- section 4 -Home banner -->
+<!-- todo: add into HomeBannerComponent -->
+<div class="ayur-banner-section bg-center bg-cover bg-no-repeat" style="background-image: url('/banner-bg.png');">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-12 lg:col-span-12 md:col-span-12 sm:col-span-12">
                 <div class="ayur-banner-heading">
                     <h1>Welcome to <span>Raseshwar Ayurveda</span> </h1>
                     <p>Experience authentic Ayurvedic healing tailored to you — effective, affordable, and rooted in
                         centuries of tradition. We specialize in personalized Ayurvedic therapies and holistic
                         treatments that restore balance and promote lasting wellness.</p>
                     <button
-                        class="inline-block min-w-40 rounded-[22px] bg-[#cd8973] min-h-11.25 border border-[#f2efec] text-white font-medium text-center capitalize py-2.25 relative overflow-hidden z-1 transition-all duration-300 font-inter hover:text-[#cd8973] after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-1 after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                        class="inline-block min-w-40 rounded-[22px] bg-[#cd8973] min-h-11.25 border border-[#f2efec] text-white font-medium text-center capitalize py-2.25 relative overflow-hidden z-1 transition-all duration-300 hover:text-[#cd8973] after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-1 after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                         Book Appointment</button>
                 </div>
             </div>
@@ -108,11 +112,11 @@
 </div>
 
 
-<!-- 3 Sections by Claude code -->
-<!-- ══ SECTION 1 : DISEASES WE TREAT ══ -->
-<section class="section section-alt">
+<!-- Section 5- DISEASES WE TREAT -->
+<!-- todo: add into TreatmentOneComponent -->
+<section class="pt-28.5 pb-20 section-alt">
     <div class="container">
-        <div class="sec-head">
+        <div class="sec-head pt-14">
             <span class="eyebrow">Holistic Healing</span>
             <h2>Diseases We Treat</h2>
 
@@ -130,29 +134,6 @@
         </div>
 
         <div class="disease-grid">
-
-            <!-- <div class="disease-card">
-                <div class="icon-wrap">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                    </svg>
-                </div>
-                <h3>Eye Care</h3>
-                <p>Ayurvedic therapies for vision health, eye strain & ocular disorders.</p>
-            </div> -->
-
-            <!-- <div class="disease-card">
-                <div class="icon-wrap">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.29 0-2.15.16-2.89.36C14.2 12.82 16.15 10.19 17 8z" />
-                    </svg>
-                </div>
-                <h3>Skin Care</h3>
-                <p>Natural remedies for eczema, psoriasis, acne & skin rejuvenation.</p>
-            </div> -->
-
             <div class="disease-card">
                 <div class="icon-wrap">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,17 +151,6 @@
                 <h3>Diabetes</h3>
                 <p>Herbal formulations & lifestyle guidance to regulate blood sugar levels.</p>
             </div>
-
-            <!-- <div class="disease-card">
-                <div class="icon-wrap">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8m0 3c-2.81 0-5.19 1.5-6.5 3.78.95-.78 2.3-1.28 3.75-1.28 1.95 0 3.65.87 4.75 2.22.78-.93 1.94-1.5 3.25-1.5.44 0 .87.07 1.27.2A7.5 7.5 0 0 0 12 7z" />
-                    </svg>
-                </div>
-                <h3>Hair Care</h3>
-                <p>Treatments for hair fall, dandruff & scalp health using Ayurvedic oils.</p>
-            </div> -->
 
             <div class="disease-card">
                 <div class="icon-wrap">
@@ -260,8 +230,6 @@
     </div>
 
     <div class="flex flex-col items-center justify-center py-10">
-        <!-- <h3 class="font-bold text-2xl" style="font-size: 32px;">Diseases We <span class="text-[#cd8973]">Treat</span>
-        </h3> -->
         <div class="card mx-2">
             <p-carousel [value]="products()" [numVisible]="6" [numScroll]="1" [circular]="true"
                 [responsiveOptions]="responsiveOptions" autoplayInterval="000">
@@ -281,7 +249,8 @@
 
 
 
-<!-- ══ SECTION 2 : SPECIALIZED TREATMENTS ══ -->
+<!-- ══ SECTION 6 : SPECIALIZED TREATMENTS ══ -->
+<!-- todo: add into TreatmentTwoComponent -->
 <section class="section">
     <div class="container">
         <div class="sec-head">
@@ -454,10 +423,10 @@
                     </div>
                 </div>
                 <ul class="treat-list">
-                    <li><span ></span> Rheumatoid Arthritis (Amavata)</li>
-                    <li><span ></span> Osteoarthritis (Sandhigata Vata)</li>
-                    <li><span ></span> Gout / Gouty Arthritis (Vatarakta)</li>
-                    <li><span ></span> Spinal Disorders – Back &amp; Neck Issues</li>
+                    <li><span></span> Rheumatoid Arthritis (Amavata)</li>
+                    <li><span></span> Osteoarthritis (Sandhigata Vata)</li>
+                    <li><span></span> Gout / Gouty Arthritis (Vatarakta)</li>
+                    <li><span></span> Spinal Disorders – Back &amp; Neck Issues</li>
                 </ul>
             </div>
 
@@ -478,8 +447,8 @@
                     </div>
                 </div>
                 <ul class="treat-list">
-                    <li><span ></span> Hyperacidity (Amlapitta)</li>
-                    <li><span ></span> Bleeding Disorders (Raktapitta)</li>
+                    <li><span></span> Hyperacidity (Amlapitta)</li>
+                    <li><span></span> Bleeding Disorders (Raktapitta)</li>
                 </ul>
             </div>
 
@@ -500,8 +469,8 @@
                     </div>
                 </div>
                 <ul class="treat-list">
-                    <li><span ></span> Indigestion (Ajirna)</li>
-                    <li><span ></span> Piles / Hemorrhoids (Mulvyadh)</li>
+                    <li><span></span> Indigestion (Ajirna)</li>
+                    <li><span></span> Piles / Hemorrhoids (Mulvyadh)</li>
                 </ul>
             </div>
 
@@ -520,10 +489,10 @@
                     </div>
                 </div>
                 <ul class="treat-list">
-                    <li><span ></span> Menstrual Complaints</li>
-                    <li><span ></span> Infertility (Vandhyatva)</li>
-                    <li><span ></span> PCOD – Polycystic Ovarian Disease</li>
-                    <li><span ></span> Garbhasanskar – Antenatal Care &amp; Education</li>
+                    <li><span></span> Menstrual Complaints</li>
+                    <li><span></span> Infertility (Vandhyatva)</li>
+                    <li><span></span> PCOD – Polycystic Ovarian Disease</li>
+                    <li><span></span> Garbhasanskar – Antenatal Care &amp; Education</li>
                 </ul>
             </div>
 
@@ -532,20 +501,15 @@
                     <div class="cat-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M32.7409 14.9984C35.2257 14.9984 37.24 12.9841 37.24 10.4992C37.24 8.01442 35.2257 6 32.7409 6C30.2561 6 28.2417 8.01442 28.2417 10.4992C28.2417 12.9841 30.2561 14.9984 32.7409 14.9984Z"
-                                 />
+                                d="M32.7409 14.9984C35.2257 14.9984 37.24 12.9841 37.24 10.4992C37.24 8.01442 35.2257 6 32.7409 6C30.2561 6 28.2417 8.01442 28.2417 10.4992C28.2417 12.9841 30.2561 14.9984 32.7409 14.9984Z" />
                             <path
-                                d="M20.7366 20.4688C21.7659 19.4336 21.7612 17.76 20.726 16.7307C19.6908 15.7013 18.0172 15.7061 16.9878 16.7413L15.0269 18.7134H12.4411C10.9813 18.7134 9.79785 19.8969 9.79785 21.3567C9.79785 22.8166 10.9813 24 12.4411 24H15.2017C16.5568 24 17.8538 23.4499 18.7959 22.4757L20.7366 20.4688Z"
-                                 />
+                                d="M20.7366 20.4688C21.7659 19.4336 21.7612 17.76 20.726 16.7307C19.6908 15.7013 18.0172 15.7061 16.9878 16.7413L15.0269 18.7134H12.4411C10.9813 18.7134 9.79785 19.8969 9.79785 21.3567C9.79785 22.8166 10.9813 24 12.4411 24H15.2017C16.5568 24 17.8538 23.4499 18.7959 22.4757L20.7366 20.4688Z" />
                             <path
-                                d="M20.9148 29.1888C20.9148 29.1888 18.6371 28.764 17.7052 29.1888C17.0113 29.5051 14.3259 30.4693 13 30.941L13 39.8015C13.7674 39.7566 15.2933 39.6759 15.9451 39.7022C17.8882 39.7805 19.3391 40.2418 20.8062 40.7081C22.1749 41.1433 23.5575 41.5828 25.3668 41.7199C25.8215 41.7544 26.2641 41.7989 26.6931 41.842C28.2423 41.9977 29.6155 42.1358 30.7506 41.7199C32.2001 41.1889 40.4829 37.1535 41.5182 36.0915C42.5536 35.0296 42.0359 32.1623 38.8263 32.6933C37.2426 32.9553 35.4069 33.7085 33.7419 34.3917C32.0326 35.0931 30.5034 35.7206 29.6117 35.6668C27.8517 35.5606 23.1926 34.711 23.1926 34.711L28.542 34.7757C28.542 34.7757 29.2977 34.8159 30.3365 34.0738C31.3753 33.3318 32.3037 31.2065 30.7506 31.2065C29.1976 31.2065 27.541 30.6755 27.541 30.6755L20.9148 29.1888Z"
-                                 />
+                                d="M20.9148 29.1888C20.9148 29.1888 18.6371 28.764 17.7052 29.1888C17.0113 29.5051 14.3259 30.4693 13 30.941L13 39.8015C13.7674 39.7566 15.2933 39.6759 15.9451 39.7022C17.8882 39.7805 19.3391 40.2418 20.8062 40.7081C22.1749 41.1433 23.5575 41.5828 25.3668 41.7199C25.8215 41.7544 26.2641 41.7989 26.6931 41.842C28.2423 41.9977 29.6155 42.1358 30.7506 41.7199C32.2001 41.1889 40.4829 37.1535 41.5182 36.0915C42.5536 35.0296 42.0359 32.1623 38.8263 32.6933C37.2426 32.9553 35.4069 33.7085 33.7419 34.3917C32.0326 35.0931 30.5034 35.7206 29.6117 35.6668C27.8517 35.5606 23.1926 34.711 23.1926 34.711L28.542 34.7757C28.542 34.7757 29.2977 34.8159 30.3365 34.0738C31.3753 33.3318 32.3037 31.2065 30.7506 31.2065C29.1976 31.2065 27.541 30.6755 27.541 30.6755L20.9148 29.1888Z" />
                             <path
-                                d="M6 30.0007C6 29.4484 6.44772 29.0007 7 29.0007H10C10.5523 29.0007 11 29.4484 11 30.0007V40.9961C11 41.5484 10.5523 41.9961 10 41.9961H7C6.44772 41.9961 6 41.5484 6 40.9961V30.0007Z"
-                                 />
+                                d="M6 30.0007C6 29.4484 6.44772 29.0007 7 29.0007H10C10.5523 29.0007 11 29.4484 11 30.0007V40.9961C11 41.5484 10.5523 41.9961 10 41.9961H7C6.44772 41.9961 6 41.5484 6 40.9961V30.0007Z" />
                             <path
-                                d="M34.6317 18.6572C36.1047 18.6572 37.2989 19.8513 37.2989 21.3244C37.2989 22.7959 36.1073 23.9895 34.6357 23.9913C33.3416 23.993 31.9661 23.9946 31.4986 23.9946C31.485 23.9946 31.4723 23.9929 31.4596 23.9912C31.4469 23.9895 31.4342 23.9878 31.4206 23.9878C31.1044 23.996 30.7897 23.9386 30.4966 23.8192C30.2036 23.6998 29.9384 23.521 29.22.572C28.5638 23.0212 28.0446 23.3785 27.4705 23.6229C26.8963 23.8673 26.2788 23.9936 25.6548 23.9946H22.5719L22.1041 14.6436H27.0619C28.1369 14.6436 29.1667 15.0763 29.919 15.8441L32.6754 18.6572H34.6317Z"
-                                 />
+                                d="M34.6317 18.6572C36.1047 18.6572 37.2989 19.8513 37.2989 21.3244C37.2989 22.7959 36.1073 23.9895 34.6357 23.9913C33.3416 23.993 31.9661 23.9946 31.4986 23.9946C31.485 23.9946 31.4723 23.9929 31.4596 23.9912C31.4469 23.9895 31.4342 23.9878 31.4206 23.9878C31.1044 23.996 30.7897 23.9386 30.4966 23.8192C30.2036 23.6998 29.9384 23.521 29.22.572C28.5638 23.0212 28.0446 23.3785 27.4705 23.6229C26.8963 23.8673 26.2788 23.9936 25.6548 23.9946H22.5719L22.1041 14.6436H27.0619C28.1369 14.6436 29.1667 15.0763 29.919 15.8441L32.6754 18.6572H34.6317Z" />
                         </svg>
 
                     </div>
@@ -555,7 +519,7 @@
                     </div>
                 </div>
                 <ul class="treat-list">
-                    <li><span ></span> Suvarnaprashan – Ayurvedic Immunization for Children</li>
+                    <li><span></span> Suvarnaprashan – Ayurvedic Immunization for Children</li>
                 </ul>
             </div>
 
@@ -563,7 +527,8 @@
     </div>
 </section>
 
-<!-- ══ SECTION 3 : PANCHAKARMA FACILITIES ══ -->
+<!-- ══ SECTION 7 : PANCHAKARMA FACILITIES ══ -->
+<!-- todo: add into TreatmentThreeComponent -->
 <section class="section section-dark">
     <div class="container">
         <div class="sec-head">
@@ -659,7 +624,8 @@
     </div>
 </section>
 
-<!-- About Us -->
+<!--  SECTION 8 -  About Us -->
+<!-- todo: add into AboutUsComponent -->
 <div class="relative bg-center bg-no-repeat bg-cover 
 bg-[url('/about-us-bg.png')] section
  ">
@@ -679,13 +645,15 @@ bg-[url('/about-us-bg.png')] section
                         class="absolute inset-x-0 top-0 h-32 bg-gradient-to-r from-emerald-500/15 via-emerald-400/10 to-emerald-500/15 pointer-events-none">
                     </div>
 
-                    <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-4 ring-emerald-400 bg-white shadow-lg">
-                        <img src="/user.jpg" alt="Founder doctor portrait" class="w-full h-full object-cover" />
+                    <div
+                        class="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-emerald-400 bg-white shadow-lg">
+                        <img src="/gd2.png" alt="Founder doctor portrait"
+                            class="w-full h-full object-contain object-center bg-white" />
                     </div>
 
                     <div class="relative mt-6 space-y-3 text-center lg:text-left">
                         <h3 class="text-2xl font-semibold tracking-tight text-emerald-950">
-                            Dr. Raseshwar Patil
+                            Dr. Gaurav Dongre (Mr.)
                         </h3>
                         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
                             Ayurvedic Consultant & Panchakarma Specialist
@@ -732,13 +700,15 @@ bg-[url('/about-us-bg.png')] section
                         class="absolute inset-x-0 top-0 h-32 bg-gradient-to-r from-emerald-500/15 via-emerald-400/10 to-emerald-500/15 pointer-events-none">
                     </div>
 
-                    <div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-4 ring-emerald-400 bg-white shadow-lg">
-                        <img src="/user.jpg" alt="Co-founder doctor portrait" class="w-full h-full object-cover" />
+                    <div
+                        class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden ring-4 ring-emerald-400 bg-white shadow-lg">
+                        <img src="/sd2.png" alt="Co-founder doctor portrait"
+                            class="w-full h-full object-contain object-center bg-white" />
                     </div>
 
                     <div class="relative mt-6 space-y-3 text-center lg:text-right">
                         <h3 class="text-2xl font-semibold tracking-tight text-emerald-950">
-                            Dr. Raseshwar Patil (Mrs.)
+                            Dr. Sharvari Dongre (Mrs.)
                         </h3>
                         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
                             Ayurvedic Gynecology & Wellness Expert
@@ -751,7 +721,8 @@ bg-[url('/about-us-bg.png')] section
                             </p>
                             <p>
                                 <span class="font-semibold text-emerald-900">Experience:</span>
-                                Extensive experience in women&apos;s health, hormonal balance, fertility care and holistic
+                                Extensive experience in women&apos;s health, hormonal balance, fertility care and
+                                holistic
                                 pre-post-natal support.
                             </p>
                             <p>
@@ -782,135 +753,9 @@ bg-[url('/about-us-bg.png')] section
     </div>
 </div>
 
-<!-- Corousel section -->
-<!-- <div class="container-fluid">
-    <div class="ayur-care-slider-sec">
-        <div class="swiper ayur-care-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
-            <div class="swiper-wrapper" id="swiper-wrapper-4db35366f1a1087f5" aria-live="polite">
-                <div class="swiper-slide swiper-slide-active style-91NlM" role="group" aria-label="1 / 10"
-                    data-swiper-slide-index="0" id="style-91NlM">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img gen-TFP-ayur-banne gen-vzN-ayur-banne">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img1.png"
-                                alt="img">
-                        </div>
-                        <h3>Eye Care</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide swiper-slide-next style-BMy3I" role="group" aria-label="2 / 10"
-                    data-swiper-slide-index="1" id="style-BMy3I">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img2.png"
-                                alt="img">
-                        </div>
-                        <h3>Hair Care</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-V5Pna" role="group" aria-label="3 / 10" data-swiper-slide-index="2"
-                    id="style-V5Pna">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img3.png"
-                                alt="img">
-                        </div>
-                        <h3>Skin Care</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-YUVdo" role="group" aria-label="4 / 10" data-swiper-slide-index="3"
-                    id="style-YUVdo">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img4.png"
-                                alt="img">
-                        </div>
-                        <h3>Men's Health</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-op8La" role="group" aria-label="5 / 10" data-swiper-slide-index="4"
-                    id="style-op8La">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img5.png"
-                                alt="img">
-                        </div>
-                        <h3>Women's Health</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-nSBre" role="group" aria-label="6 / 10" data-swiper-slide-index="5"
-                    id="style-nSBre">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img6.png"
-                                alt="img">
-                        </div>
-                        <h3>Memory Health</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-49137" role="group" aria-label="7 / 10" data-swiper-slide-index="6"
-                    id="style-49137">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img7.png"
-                                alt="img">
-                        </div>
-                        <h3>Beauty</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-Rqx2Q" role="group" aria-label="8 / 10" data-swiper-slide-index="7"
-                    id="style-Rqx2Q">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img8.png"
-                                alt="img">
-                        </div>
-                        <h3>Brain Health</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-GgmBW" role="group" aria-label="9 / 10" data-swiper-slide-index="8"
-                    id="style-GgmBW">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img1.png"
-                                alt="img">
-                        </div>
-                        <h3>Eye Care</h3>
-                    </div>
-                </div>
-                <div class="swiper-slide style-IgIyT" role="group" aria-label="10 / 10" data-swiper-slide-index="9"
-                    id="style-IgIyT">
-                    <div class="ayur-careslide-box">
-                        <div class="ayur-careslider-img">
-                            <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/care-img2.png"
-                                alt="img">
-                        </div>
-                        <h3>Hair Care</h3>
-                    </div>
-                </div>
-            </div>
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
-            aria-controls="swiper-wrapper-4db35366f1a1087f5">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M20 0C31.0284 0 40 8.97164 40 20C40 31.0284 31.0284 40 20 40C8.97164 40 0 31.0284 0 20C0 8.97164 8.97164 0 20 0ZM13.8216 21.1784L22.155 29.5116C22.3096 29.6666 22.4932 29.7896 22.6955 29.8734C22.8977 29.9572 23.1145 30.0002 23.3334 30C23.5523 30.0002 23.769 29.9572 23.9712 29.8733C24.1735 29.7895 24.3571 29.6666 24.5117 29.5116C25.1634 28.86 25.1634 27.8066 24.5117 27.155L17.3566 20L24.5116 12.845C25.1633 12.1934 25.1633 11.14 24.5116 10.4884C23.86 9.83672 22.8066 9.83672 22.155 10.4884L13.8216 18.8217C13.17 19.4734 13.17 20.5266 13.8216 21.1784Z"
-                    fill="#D6CDCA" />
-            </svg>
-        </div>
-        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
-            aria-controls="swiper-wrapper-4db35366f1a1087f5">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M20 0C8.97164 0 0 8.97164 0 20C0 31.0284 8.97164 40 20 40C31.0284 40 40 31.0284 40 20C40 8.97164 31.0284 0 20 0ZM26.1784 21.1784L17.845 29.5116C17.6904 29.6666 17.5068 29.7896 17.3045 29.8734C17.1023 29.9572 16.8855 30.0002 16.6666 30C16.4477 30.0002 16.231 29.9572 16.0288 29.8733C15.8265 29.7895 15.6429 29.6666 15.4883 29.5116C14.8366 28.86 14.8366 27.8066 15.4883 27.155L22.6434 20L15.4884 12.845C14.8367 12.1934 14.8367 11.14 15.4884 10.4884C16.14 9.83672 17.1934 9.83672 17.845 10.4884L26.1784 18.8217C26.83 19.4734 26.83 20.5266 26.1784 21.1784Z"
-                    fill="#CD8973" />
-            </svg>
-        </div>
-    </div>
-</div> -->
 
-
-<!-- products section -->
+<!-- SECTION 9 - products -->
+<!-- todo: add into ProductsComponent -->
 <div class="ayur-bgcover ayur-topproduct-sec snipcss-Sw8KX">
     <div class="container">
         <div class="flex flex-row flex-wrap items-center justify-center text-center">
@@ -951,7 +796,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -993,7 +838,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1034,7 +879,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1075,7 +920,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1116,7 +961,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1158,7 +1003,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-tpro-btn">
                             <a href="cart.html"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                                 <span>
                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1174,7 +1019,7 @@ bg-[url('/about-us-bg.png')] section
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="ayur-tpro-viewbtn">
                     <a href="shop.html"
-                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">View
+                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">View
                         More</a>
                 </div>
             </div>
@@ -1188,7 +1033,8 @@ bg-[url('/about-us-bg.png')] section
     </div>
 </div>
 
-<!-- section 4 -->
+<!-- section 10 - Extras -->
+<!-- todo: add into ExtrasComponent -->
 <div class="ayur-bgcover ayur-about-sec snipcss-D6bDZ">
     <div class="container">
         <div class="grid grid-cols-12">
@@ -1212,7 +1058,7 @@ bg-[url('/about-us-bg.png')] section
                         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <a href="about.html"
-                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">Know
+                        class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">Know
                         More</a>
                 </div>
             </div>
@@ -1226,8 +1072,8 @@ bg-[url('/about-us-bg.png')] section
     </div>
 </div>
 
-
-<!-- footer -->
+<!-- section 10  - footer -->
+<!-- todo: add into FooterCo mponent -->
 <div class="ayur-footer-section snipcss-tKBhA">
     <div class="container">
         <div class="ayur-sign-sec">
@@ -1244,7 +1090,7 @@ bg-[url('/about-us-bg.png')] section
                         </div>
                         <div class="ayur-form-btn">
                             <a href="javascript:void(0)"
-                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 font-inter hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%] gen-Mg7-ayur-cares">Subscribe</a>
+                                class="inline-block min-w-[145px] rounded-[22px] bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%] gen-Mg7-ayur-cares">Subscribe</a>
                         </div>
                     </form>
                 </div>

@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
-import { Test } from '../../services/test';
 
 @Component({
   selector: 'app-home',
@@ -28,11 +27,9 @@ export class Home implements AfterViewInit, OnInit {
    // number of items per slide, maybe 6? adjust accordingly
    itemsPerSlide = 1;
 
-   testService  = inject(Test);
 
   ngOnInit() {
 
-    this.callApi();
     this.responsiveOptions = [
       {
         breakpoint: '1400px',
@@ -143,17 +140,5 @@ export class Home implements AfterViewInit, OnInit {
 
    prevSlide() {
      this.carouselOffset = Math.max(0, this.carouselOffset - 100);
-   }
-
-
-   callApi(){
-    this.testService.testAPI().subscribe({
-      next: (response) => {
-        console.log('API Response:', response);
-      },
-      error: (error) => {
-        console.error('API Error:', error);
-      }
-    });
    }
 }

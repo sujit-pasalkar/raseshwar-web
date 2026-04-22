@@ -2,7 +2,6 @@
 @import 'primeicons/primeicons.css';
 
 @import url('https://fonts.googleapis.com/css?family=Archivo:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');
 
 @layer base {
   body {
@@ -49,6 +48,10 @@ body {
   font-family: 'Archivo', sans-serif;
 } */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -76,8 +79,6 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-
 
 :root {
   --bs-font-sans-serif:
@@ -341,7 +342,6 @@ h1 {
   padding: 0;
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -352,7 +352,6 @@ h1 {
   font-weight: 400;
   line-height: 24px;
   color: var(--ayur-para-color);
-  font-family: 'Inter', sans-serif;
 } */
 
 .ayur-banner-heading p {
@@ -398,7 +397,6 @@ a {
   overflow: hidden;
   z-index: 1;
   transition: box-shadow 0.5s;
-  font-family: 'Inter', sans-serif;
   transition: all 0.3s linear;
 }
 
@@ -434,7 +432,7 @@ a:hover {
   height: 380%;
 }
 
-/* .swiper {
+.swiper {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -443,7 +441,7 @@ a:hover {
   padding: 0;
   z-index: 1;
   display: block;
-} */
+}
 
 /* .swiper-horizontal {
   touch-action: pan-y;
@@ -1097,7 +1095,6 @@ p {
   color: var(--ayur-text-color);
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Inter', sans-serif;
   margin-right: 10px;
 }
 
@@ -1294,7 +1291,6 @@ h5 {
 ul {
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1395,7 +1391,6 @@ input {
   border: none;
   padding: 10px 20px;
   border: 1px solid var(--ayur-border-color);
-  font-family: 'Inter', sans-serif;
 }
 
 .ayur-subscribe-sec .ayur-form-input .form-control {
@@ -1445,7 +1440,6 @@ ul.ayur-links li a {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
-  font-family: 'Inter', sans-serif;
   color: var(--ayur-footertext-color);
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -1537,7 +1531,6 @@ ul.ayur-social-link li a svg {
 .ayur-recentblog-text h3.text {
   font-size: 14px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
   color: var(--ayur-footertext-color);
 }
 
@@ -1589,7 +1582,6 @@ ul.ayur-social-link li a svg {
 .ayur-nav-menu ul li a {
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Inter', sans-serif;
   color: var(--ayur-banheading-color);
 }
 
@@ -1641,7 +1633,7 @@ ul.ayur-social-link li a svg {
 } */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Archivo', sans-serif;
   background: var(--cream);
   color: var(--text-dark);
   line-height: 1.65;
@@ -1678,7 +1670,7 @@ body {
   margin-bottom: 10px;
 }
 .sec-head h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Archivo', sans-serif;
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;
   color: var(--green-dark);
@@ -1782,7 +1774,7 @@ body {
 }
 
 .disease-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--green-dark);
@@ -1845,7 +1837,7 @@ body {
   fill: var(--gold-light);
 }
 .treat-cat-header h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--green-dark);
@@ -1917,7 +1909,7 @@ body {
   height: 30px;
 }
 .treat-banner h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Archivo', sans-serif;
   font-size: clamp(18px, 2.5vw, 24px);
   color: var(--gold-light);
   margin-bottom: 5px;
@@ -1959,7 +1951,7 @@ body {
   margin-bottom: 10px;
 }
 .pancha-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 16px;
   color: var(--gold-light);
   margin-bottom: 8px;
@@ -1981,4 +1973,32 @@ body {
   .pancha-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cd8973;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8735f;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+html {
+  scrollbar-color: #cd8973 #f1f1f1;
 }

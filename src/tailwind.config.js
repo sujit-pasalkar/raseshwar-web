@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       fontFamily: {
         archivo: ['Archivo', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
       },
       colors: {
         ayur: {
