@@ -1,0 +1,56 @@
+<div
+    class="absolute left-0 right-0 top-0 shadow-[2px_4px_22px_0px_rgba(0,0,0,0.04)] bg-white px-3 py-1 mx-auto max-w-292.5 z-9 rounded-b-[30px] bg-primary">
+    <div class="container">
+        <div class="grid grid-cols-12 items-center">
+            <div class="lg:col-span-2 md:col-span-4 sm:col-span-5 col-span-6">
+                <a>
+                    <img src="rs-logo-5-transparent-croped.png" class="w-[35%]"></a>
+            </div>
+            <div class="lg:col-span-10 md:col-span-8 sm:col-span-7 col-span-6">
+                <div class="flex items-center justify-end text-end">
+                    <!--desktop nav list  -->
+                    <div class="ayur-nav-menu lg:block hidden">
+                        <ul>
+                            <!-- todo: add your section link connection here -->
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <button #menuBtn class="relative w-8 h-8 focus:outline-none cursor-pointer lg:hidden block"
+                        (click)="toggleSidebar()">
+                        <span
+                            class="block absolute h-0.75 w-8 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line1 style="top:8px"></span>
+                        <span
+                            class="block absolute h-0.75 w-6.5 ml-1.5 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line2 style="top:16px"></span>
+                        <span
+                            class="block absolute h-0.75 w-8 rounded-xs bg-[#cd8973] transform transition duration-300 ease-in-out"
+                            #line3 style="top:24px"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- section 3 - Sidebar -->
+<div #sidebar class="fixed top-0 -left-55 w-55 h-full bg-white shadow-lg transition-all duration-300 z-40 pt-7 pl-14">
+    <div class="pb-7">
+        <a>
+            <img src="rs-logo-5-transparent-croped.png" class="w-[35%]"></a>
+    </div>
+    <ul class="space-y-6 text-lg font-semibold flex flex-col gap-4">
+        <li><a href="#" class="hover:text-green-600">Home</a></li>
+        <li><a href="#" class="hover:text-green-600">About</a></li>
+        <li><a href="#" class="hover:text-green-600">Services</a></li>
+        <li><a href="#" class="hover:text-green-600">Portfolio</a></li>
+        <li><a href="#" class="hover:text-green-600">Contact</a></li>
+    </ul>
+
+</div>
