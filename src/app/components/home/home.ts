@@ -10,11 +10,13 @@ import { ProductsComponent } from '../products/products.component';
 import { FooterComponent } from '../footer/footer.component';
 import { BlogComponent } from '../blog/blog.component';
 import { TopbarComponent } from '../topbar/topbar.component';
+import { Whoweare } from '../whoweare/whoweare';
 
 @Component({
   selector: 'app-home',
   imports: [ButtonModule, CarouselModule, NavbarComponent, BannerComponent, 
-    ServicesComponent, AboutComponent, ProductsComponent, FooterComponent,BlogComponent,TopbarComponent
+    ServicesComponent, AboutComponent, ProductsComponent, FooterComponent,BlogComponent,TopbarComponent,
+    Whoweare
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

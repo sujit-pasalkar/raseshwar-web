@@ -456,7 +456,7 @@ a:hover {
   padding: 20px 0 20px;
 }
 
-.ayur-banner-slider:after {
+/* .ayur-banner-slider:after {
   position: absolute;
   content: '';
   bottom: 0;
@@ -469,7 +469,7 @@ a:hover {
   background-color: var(--ayur-primary-color);
   z-index: -1;
   border-radius: 210px;
-}
+} */
 
 .ayur-banner-heading h1 span {
   font-size: 54px;
@@ -908,7 +908,7 @@ img {
   background-color: var(--ayur-white-color);
   box-shadow: 3px 4px 29.6px 0px #0000000f;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 0 0 30px;
   transition: all 0.3s ease-in-out;
 }
@@ -936,7 +936,7 @@ img {
 .ayur-tpro-img {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 a {
@@ -1066,12 +1066,6 @@ p {
   border-radius: 70px;
 }
 
-.ayur-tpro-star {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .ayur-tpro-sale-off p {
   background-color: #21c0f2;
 }
@@ -1096,12 +1090,6 @@ p {
   font-size: 20px;
   font-weight: 700;
   margin-right: 10px;
-}
-
-.ayur-tpro-star > p {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--ayur-para-color);
 }
 
 .gen-jj6-ayur-ban-s {
@@ -1154,7 +1142,7 @@ svg {
 
 .ayur-about-bgshape img:nth-child(2) {
   right: 0;
-  top: -20px;
+  top: 50px;
   animation: jumpThree 5s infinite linear;
 }
 
@@ -1197,7 +1185,7 @@ h5 {
 
 .ayur-about-exp {
   position: absolute;
-  bottom: 26px;
+  bottom: -4px;
   left: 74px;
   display: flex;
   align-items: center;
