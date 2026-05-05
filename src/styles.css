@@ -332,6 +332,15 @@ h1 {
   color: var(--ayur-banheading-color);
 }
 
+@media (max-width: 575px) {
+  .ayur-banner-heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color: var(--ayur-banheading-color);
+  }
+}
+
 /* p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -355,7 +364,8 @@ h1 {
 } */
 
 .ayur-banner-heading p {
-  color: var(--ayur-para-color);
+  /* color: var(--ayur-para-color); */
+  color: var(--ayur-banheading-color);
   text-align: center;
   max-width: 680px;
   margin: 0 auto;
@@ -480,6 +490,15 @@ a:hover {
 
 .ayur-banner-heading h1 span {
   color: var(--ayur-primary-color);
+}
+
+@media (max-width: 575px) {
+  .ayur-banner-heading h1 span {
+    color: var(--ayur-primary-color);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+  }
 }
 
 /* .swiper-wrapper {
@@ -929,6 +948,12 @@ img {
   color: var(--ayur-heading-color);
 }
 
+@media (max-width: 375px) {
+    .ayur-heading-wrap > h3 {
+        font-size: 25px;
+    }
+}
+
 .ayur-tpro-text {
   padding: 11px 10px 8px;
 }
@@ -1192,6 +1217,17 @@ h5 {
   gap: 10px;
 }
 
+@media (max-width: 600px) {
+  .ayur-about-exp {
+  position: absolute;
+  bottom: -30px;
+  left: 74px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+}
+
 .ayur-about-img {
   position: relative;
 }
@@ -1263,6 +1299,65 @@ h5 {
 .ayur-sign-sec {
   padding: 0 0 42px;
   border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.ayur-footer-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.ayur-footer-box {
+  padding-bottom: 16px;
+}
+
+.ayur-footer-box iframe {
+  width: 100%;
+  min-height: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.ayur-contact-list {
+  display: grid;
+  /* gap: 18px; */
+  padding: 0;
+  margin: 0;
+}
+
+.ayur-contact-list li p {
+  margin: 0;
+}
+
+ul.ayur-social-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+@media (max-width: 767px) {
+  .ayur-footer-section {
+    padding: 40px 0 24px;
+  }
+
+  .ayur-footer-box {
+    padding-bottom: 24px;
+  }
+
+  .ayur-footer-box h4 {
+    font-size: 18px;
+  }
+
+  .ayur-footer-bgshape {
+    display: none;
+  }
+
+  .ayur-footer-box iframe {
+    min-height: 260px;
+  }
 }
 
 .ayur-form-input {
@@ -1540,6 +1635,10 @@ ul.ayur-social-link li a svg {
   line-height: 22px;
   padding: 16px 0 14px;
   text-align: center;
+}
+
+.ayur-copyright-para p a{
+  color: var(--ayur-footertext-color);
 }
 
 .ayur-toggle-btn span {
@@ -1912,7 +2011,7 @@ body {
 .pancha-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 22px;
+  /* gap: 22px; */
 }
 .pancha-card {
   background: rgba(255, 255, 255, 0.06);

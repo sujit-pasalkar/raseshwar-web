@@ -39,31 +39,31 @@ export class ServicesComponent {
     this.products.set([
       {
         imageId: 'care-img1',
-        name: 'Eye care',
+        name: $localize `:@@serviceEyeCare:Eye care`,
       },
       {
         imageId: 'care-img2',
-        name: 'Hair Care',
+        name: $localize `:@@serviceHairCare:Hair Care`,
       },
       {
         imageId: 'care-img3',
-        name: 'Skin Care',
+        name: $localize `:@@serviceSkinCare:Skin Care`,
       },
       {
         imageId: 'care-img5',
-        name: "Women's Health",
+        name: $localize `:@@serviceWomensHealth:Women's Health`,
       },
       {
         imageId: 'mens-health',
-        name: "Men's Health",
+        name: $localize `:@@serviceMensHealth:Men's Health`,
       },
       {
         imageId: 'care-img6',
-        name: 'Memory Health',
+        name: $localize `:@@serviceMemoryHealth:Memory Health`,
       },
       {
         imageId: 'care-img7',
-        name: 'Skin Care',
+        name: $localize `:@@serviceSkinCare:Skin Care`,
       },
       // {
       //   imageId: 'care-img8',
