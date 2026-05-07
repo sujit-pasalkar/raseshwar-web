@@ -1,14 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, signal, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NavHideOnScrollDirective } from '../../directives/navHideOnScroll.directive';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NavHideOnScrollDirective],
+  imports: [NavHideOnScrollDirective, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   @ViewChild('menuBtn') menuBtn!: ElementRef;
   @ViewChild('sidebar') sidebar!: ElementRef;
   @ViewChild('overlay') overlay!: ElementRef;
@@ -17,6 +18,27 @@ export class NavbarComponent {
   @ViewChild('line2') l2!: ElementRef;
   @ViewChild('line3') l3!: ElementRef;
   open = false;
+  activeLink = signal<string>('home');
+
+  ngOnInit(): void {
+    window.addEventListener('scroll', () => this.updateActiveLink());
+  }
+
+  private updateActiveLink(): void {
+    const sections = ['home', 'about', 'services', 'products', 'contact'];
+    
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        // Check if section is in viewport (top between -100 and window height)
+        if (rect.top <= 150 && rect.bottom > 150) {
+          this.activeLink.set(section);
+          break;
+        }
+      }
+    }
+  }
 
   
    toggleSidebar() {

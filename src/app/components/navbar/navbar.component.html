@@ -11,12 +11,22 @@
                     <!--desktop nav list  -->
                     <div class="ayur-nav-menu lg:block hidden">
                         <ul>
-                            <!-- todo: add your section link connection here -->
-                            <li class="cursor-pointer"><a i18n="@@navHome" href="#home">Home</a></li>
-                            <li class="cursor-pointer"><a i18n="@@navAbout" href="#about">About us</a></li>
-                            <li class="cursor-pointer"><a i18n="@@navServices" href="#services">Services</a></li>
-                            <li class="cursor-pointer"><a i18n="@@navShop" href="#products">Products</a></li>
-                            <li class="cursor-pointer"><a i18n="@@navContact" href="#contact">Contact us</a></li>
+                            <li><a i18n="@@navHome" href="#home" class="cursor-pointer hover:text-[#cd8973] "><span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'home'}">Home</span> </a>
+                            </li>
+                            <li><a i18n="@@navAbout" href="#about" class="cursor-pointer hover:text-[#cd8973]"><span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'about'}">About Us</span>
+                                    </a></li>
+                            <li><a i18n="@@navServices" href="#services" class="cursor-pointer hover:text-[#cd8973]">
+                                    <span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'services'}">Services</span></a>
+                            </li>
+                            <li><a i18n="@@navShop" href="#products" class="cursor-pointer hover:text-[#cd8973]"> <span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'products'}">Products</span></a>
+                            </li>
+                            <li><a i18n="@@navContact" href="#contact" class="cursor-pointer hover:text-[#cd8973]">
+                                    <span [ngClass]="{'text-[#cd8973]': activeLink() === 'contact'}">Contact Us</span>
+                                    </a></li>
                         </ul>
                     </div>
 
@@ -45,11 +55,22 @@
             <img src="rs-logo-5-transparent-croped.png" class="w-[35%]"></a>
     </div>
     <ul class="space-y-6 text-lg font-semibold flex flex-col gap-4">
-        <li><a href="#" class="hover:text-green-600" i18n="@@navHomeSidebar">Home</a></li>
-        <li><a href="#" class="hover:text-green-600" i18n="@@navAboutSidebar">About</a></li>
-        <li><a href="#" class="hover:text-green-600" i18n="@@navServicesSidebar">Services</a></li>
-        <li><a href="#" class="hover:text-green-600" i18n="@@navPortfolioSidebar">Portfolio</a></li>
-        <li><a href="#" class="hover:text-green-600" i18n="@@navContactSidebar">Contact</a></li>
+       <li><a i18n="@@navHome" href="#home" class="cursor-pointer hover:text-[#cd8973] "><span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'home'}">Home</span> </a>
+                            </li>
+                            <li><a i18n="@@navAbout" href="#about" class="cursor-pointer hover:text-[#cd8973]"><span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'about'}">About Us</span>
+                                    </a></li>
+                            <li><a i18n="@@navServices" href="#services" class="cursor-pointer hover:text-[#cd8973]">
+                                    <span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'services'}">Services</span></a>
+                            </li>
+                            <li><a i18n="@@navShop" href="#products" class="cursor-pointer hover:text-[#cd8973]"> <span
+                                        [ngClass]="{'text-[#cd8973]': activeLink() === 'products'}">Products</span></a>
+                            </li>
+                            <li><a i18n="@@navContact" href="#contact" class="cursor-pointer hover:text-[#cd8973]">
+                                    <span [ngClass]="{'text-[#cd8973]': activeLink() === 'contact'}">Contact Us</span>
+                                    </a></li>
     </ul>
 
 </div>

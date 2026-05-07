@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'primeicons/primeicons.css';
 
 @import url('https://fonts.googleapis.com/css?family=Archivo:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap');
 
@@ -343,6 +342,41 @@ h1 {
     line-height: 50px;
     color: var(--ayur-banheading-color);
   }
+
+  /* gpt  option 1*/
+   /* .ayur-banner-heading {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(3px);
+    border-radius: 14px;
+    padding: 18px 14px;
+    box-shadow: 0 10px 30px rgba(45, 80, 22, 0.12);
+  }
+
+  .ayur-banner-heading h1,
+  .ayur-banner-heading h1 span {
+    color: #2d5016;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  } */
+
+  /* option 2 */
+  .ayur-banner-heading h1,
+  .ayur-banner-heading h1 span {
+    color: #1f3f12;
+    text-shadow:
+      0 2px 4px rgba(255, 255, 255, 0.95),
+      0 4px 14px rgba(45, 80, 22, 0.22);
+  }
+
+  /* option 3*/
+   .ayur-ban-leaf img:nth-child(1) {
+    opacity: 0.28;
+    transform: scale(0.8);
+  }
+
+  .ayur-banner-heading {
+    z-index: 2;
+  }
+
 }
 
 /* p {
@@ -1673,36 +1707,6 @@ ul.ayur-social-link li a svg {
 .ayur-nav-menu ul li a {
   font-size: 16px;
   font-weight: 400;
-  color: var(--ayur-banheading-color);
-}
-
-/* .ayur-nav-menu ul li a::before,
-.ayur-nav-menu ul li.active a::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 12px;
-  width: 20px;
-  height: 1px;
-  background-color: var(--ayur-primary-color);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-} */
-
-.ayur-nav-menu ul li a:hover {
-  color: var(--ayur-primary-color);
-}
-
-.ayur-nav-menu ul li a:hover::before,
-.ayur-nav-menu ul li.active a::before {
-  opacity: 1;
-  visibility: visible;
-}
-
-.ayur-nav-menu ul li a:hover,
-.ayur-nav-menu ul li.active a {
-  color: var(--ayur-primary-color);
 }
 
 .card {
@@ -2032,7 +2036,7 @@ body {
 .pancha-card:hover {
   background: rgba(200, 169, 110, 0.1);
   border-color: var(--gold);
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
 }
 .pancha-card .p-num {
   font-size: 11px;

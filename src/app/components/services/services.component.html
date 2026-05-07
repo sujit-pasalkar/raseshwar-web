@@ -114,20 +114,32 @@
         </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center pt-10">
-        <div class="mx-2">
-            <p-carousel [value]="products()" [numVisible]="6" [numScroll]="1" [circular]="true"
-                [responsiveOptions]="responsiveOptions" autoplayInterval="000">
-                <ng-template let-product #item>
-                    <div class="p-4 flex flex-col items-center justify-center">
-                        <div class="pb-2">
-                            <img src="corousel/{{product.imageId}}.png" [alt]="product.name"
-                                class="rounded-border w-full" />
-                        </div>
-                        <h3>{{product.name}}</h3>
+    <!-- Custom Carousel -->
+    <div class="carousel-container pt-10">
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" (click)="prev()" [disabled]="currentIndex() === 0">
+                &#10094;
+            </button>
+            <div class="carousel-track" [style.transform]="'translateX(-' + (currentIndex() * (100 / itemsPerView())) + '%)'">
+                @for (product of products(); track $index) {
+                    <div class="carousel-item" [style.width.%]="100 / itemsPerView()">
+                    <div class="item-content">
+                        <img src="corousel/{{product.imageId}}.png" [alt]="product.name" class="carousel-img" />
+                        <h3 class="carousel-title">{{product.name}}</h3>
                     </div>
-                </ng-template>
-            </p-carousel>
+                </div>
+                }
+                
+            </div>
+            <button class="carousel-btn next-btn" (click)="next()" [disabled]="currentIndex() >= products().length - itemsPerView()">
+                &#10095;
+            </button>
+        </div>
+        <div class="carousel-indicators">
+            @for (i of getIndicatorIndexes(); track $index) {
+            <span class="indicator"
+                  [class.active]="$index === currentIndex()" (click)="goToIndex($index)"></span>
+        }
         </div>
     </div>
 </section>
