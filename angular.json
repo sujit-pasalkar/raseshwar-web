@@ -33,7 +33,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "localize": true,
+            "localize": false,
             "i18nMissingTranslation": "error"
           },
           "configurations": {
