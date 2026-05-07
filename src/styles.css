@@ -136,6 +136,10 @@ body {
   padding: 116px 0 103px;
 }
 
+.header-hidden {
+  transform: translateY(-100%);
+}
+
 .ayur-banner-section:before {
   position: absolute;
   content: url('https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/banner-bgleaf.png');
@@ -1672,7 +1676,7 @@ ul.ayur-social-link li a svg {
   color: var(--ayur-banheading-color);
 }
 
-.ayur-nav-menu ul li a::before,
+/* .ayur-nav-menu ul li a::before,
 .ayur-nav-menu ul li.active a::before {
   position: absolute;
   content: '';
@@ -1684,7 +1688,7 @@ ul.ayur-social-link li a svg {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .ayur-nav-menu ul li a:hover {
   color: var(--ayur-primary-color);

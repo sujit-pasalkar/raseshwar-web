@@ -1,5 +1,5 @@
-<div
-    class="absolute left-0 right-0 top-0 shadow-[2px_4px_22px_0px_rgba(0,0,0,0.04)] bg-white px-3 py-1 mx-auto max-w-292.5 z-9 rounded-b-[30px] bg-primary">
+<div #navbar navHideOnScroll
+    class="fixed left-0 right-0 top-0 shadow-[2px_4px_22px_0px_rgba(0,0,0,0.04)] bg-white px-3 py-1 mx-auto max-w-292.5 z-9 rounded-b-[30px] bg-primary transition-transform duration-300 ease-out">
     <div class="container">
         <div class="grid grid-cols-12 items-center">
             <div class="lg:col-span-2 md:col-span-4 sm:col-span-5 col-span-6">
@@ -12,12 +12,11 @@
                     <div class="ayur-nav-menu lg:block hidden">
                         <ul>
                             <!-- todo: add your section link connection here -->
-                            <li><a i18n="@@navHome">Home</a></li>
-                            <li><a i18n="@@navAbout">About</a></li>
-                            <li><a i18n="@@navShop">Shop</a></li>
-                            <li><a i18n="@@navServices">Services</a></li>
-                            <li><a i18n="@@navBlog">Blog</a></li>
-                            <li><a i18n="@@navContact">Contact</a></li>
+                            <li class="cursor-pointer"><a i18n="@@navHome" href="#home">Home</a></li>
+                            <li class="cursor-pointer"><a i18n="@@navAbout" href="#about">About us</a></li>
+                            <li class="cursor-pointer"><a i18n="@@navServices" href="#services">Services</a></li>
+                            <li class="cursor-pointer"><a i18n="@@navShop" href="#products">Products</a></li>
+                            <li class="cursor-pointer"><a i18n="@@navContact" href="#contact">Contact us</a></li>
                         </ul>
                     </div>
 

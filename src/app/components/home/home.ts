@@ -11,12 +11,13 @@ import { FooterComponent } from '../footer/footer.component';
 import { BlogComponent } from '../blog/blog.component';
 import { TopbarComponent } from '../topbar/topbar.component';
 import { Whoweare } from '../whoweare/whoweare';
+import { NavHideOnScrollDirective } from '../../directives/navHideOnScroll.directive';
 
 @Component({
   selector: 'app-home',
   imports: [ButtonModule, CarouselModule, NavbarComponent, BannerComponent, 
     ServicesComponent, AboutComponent, ProductsComponent, FooterComponent,BlogComponent,TopbarComponent,
-    Whoweare
+    Whoweare, NavHideOnScrollDirective
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

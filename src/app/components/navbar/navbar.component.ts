@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { NavHideOnScrollDirective } from '../../directives/navHideOnScroll.directive';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [NavHideOnScrollDirective],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
