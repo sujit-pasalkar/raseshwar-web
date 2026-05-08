@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css?family=Archivo:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   body {
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     background-color: #fdffff;
     overflow-x: hidden;
@@ -35,7 +35,7 @@ body {
 
 /* * {
   box-sizing: border-box;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   box-shadow: none;
 } */
 
@@ -44,7 +44,7 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-shadow: none;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 } */
 
 html {
@@ -53,7 +53,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Inter', sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -65,7 +65,7 @@ body {
 }
 
 body {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -103,30 +103,34 @@ body {
 }
 
 :root {
-  --ayur-primary-color: #cd8973;
+  --ayur-primary-color: #d89a7a;
   --ayur-white-color: #ffffff;
-  --ayur-banheading-color: #222222;
-  --ayur-para-color: #797979;
-  --ayur-text-color: #ababab;
-  --ayur-border-color: #ffebe4;
+  --ayur-banheading-color: #2b2b2b;
+  --ayur-para-color: #6f665e;
+  --ayur-text-color: #6f665e;
+  --ayur-border-color: #e7dfd3;
   --ayur-formtext-color: #dbd1d9;
-  --ayur-footer-bg: #220f08;
-  --ayur-footertext-color: #e4d4cf;
+  --ayur-footer-bg: #2f3e2c;
+  --ayur-footertext-color: rgba(255, 255, 255, 0.82);
 }
 
 /* claude code */
 :root {
-  --green-dark: #2d5016;
-  --green-mid: #4a7c2f;
-  --green-light: #7aad4a;
-  --gold: #c8a96e;
-  --gold-light: #e8d5a3;
-  --cream: #faf6ee;
-  --cream-dark: #f0e8d4;
-  --text-dark: #2a2a1e;
-  --text-mid: #5a5a3e;
-  --text-light: #8a8a6a;
+  --green-dark: #426a35;
+  --green-mid: #5e8b4a;
+  --green-light: #5e8b4a;
+  --gold: #d89a7a;
+  --gold-light: #faf7f2;
+  --cream: #faf7f2;
+  --cream-dark: #f3f1e7;
+  --text-dark: #2b2b2b;
+  --text-mid: #6f665e;
+  --text-light: #6f665e;
   --white: #ffffff;
+  --card-bg: #fffdf8;
+  --card-border: #e7dfd3;
+  --soft-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --soft-radius: 20px;
 }
 
 .ayur-banner-section {
@@ -322,7 +326,7 @@ h1 {
   line-height: 1.4;
   margin: 0;
   padding: 0;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -344,7 +348,7 @@ h1 {
   }
 
   /* gpt  option 1*/
-   /* .ayur-banner-heading {
+  /* .ayur-banner-heading {
     background: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(3px);
     border-radius: 14px;
@@ -361,14 +365,14 @@ h1 {
   /* option 2 */
   .ayur-banner-heading h1,
   .ayur-banner-heading h1 span {
-    color: #1f3f12;
+    color: var(--green-dark);
     text-shadow:
       0 2px 4px rgba(255, 255, 255, 0.95),
       0 4px 14px rgba(45, 80, 22, 0.22);
   }
 
   /* option 3*/
-   .ayur-ban-leaf img:nth-child(1) {
+  .ayur-ban-leaf img:nth-child(1) {
     opacity: 0.28;
     transform: scale(0.8);
   }
@@ -376,7 +380,6 @@ h1 {
   .ayur-banner-heading {
     z-index: 2;
   }
-
 }
 
 /* p {
@@ -417,7 +420,7 @@ a {
 
 a {
   text-decoration: none;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--ayur-banheading-color);
 }
 
@@ -987,9 +990,9 @@ img {
 }
 
 @media (max-width: 375px) {
-    .ayur-heading-wrap > h3 {
-        font-size: 25px;
-    }
+  .ayur-heading-wrap > h3 {
+    font-size: 25px;
+  }
 }
 
 .ayur-tpro-text {
@@ -1009,7 +1012,7 @@ a {
 
 a {
   text-decoration: none;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--ayur-banheading-color);
 }
 
@@ -1229,7 +1232,7 @@ h5 {
   line-height: 1.4;
   margin: 0;
   padding: 0;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1257,13 +1260,13 @@ h5 {
 
 @media (max-width: 600px) {
   .ayur-about-exp {
-  position: absolute;
-  bottom: -30px;
-  left: 74px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    position: absolute;
+    bottom: -30px;
+    left: 74px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .ayur-about-img {
@@ -1274,7 +1277,7 @@ h5 {
   font-size: 24px;
   font-weight: 600;
   color: var(--ayur-heading-color);
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .ayur-about-exp p:nth-child(1) {
@@ -1290,7 +1293,7 @@ h5 {
 } */
 
 .ayur-footer-section {
-  background-color: var(--ayur-footer-bg);
+  background: linear-gradient(to right, var(--ayur-footer-bg), #3d5138);
   position: relative;
   padding: 74px 0 0;
   overflow: hidden;
@@ -1446,7 +1449,7 @@ h4 {
   line-height: 1.4;
   margin: 0;
   padding: 0;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1554,7 +1557,21 @@ ul li {
 }
 
 ul.ayur-social-link li a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.08);
   transition: all 0.3s linear;
+}
+
+ul.ayur-social-link li a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
 ul.ayur-links li a {
@@ -1596,7 +1613,7 @@ ul.ayur-links li a:hover::before {
 
 .ayur-contact-box p {
   color: var(--ayur-footertext-color);
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .ayur-contact-box img {
@@ -1642,11 +1659,15 @@ ul.ayur-social-link li a svg {
   transition: all 0.3s linear;
 }
 
+ul.ayur-social-link li a svg path {
+  fill: currentColor;
+}
+
 .ayur-recentblog-text p.date {
   font-size: 16px;
   font-weight: 600;
   color: var(--ayur-white-color);
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .ayur-recentblog-text h3.text {
@@ -1675,7 +1696,7 @@ ul.ayur-social-link li a svg {
   text-align: center;
 }
 
-.ayur-copyright-para p a{
+.ayur-copyright-para p a {
   color: var(--ayur-footertext-color);
 }
 
@@ -1728,25 +1749,36 @@ ul.ayur-social-link li a svg {
 } */
 
 body {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--cream);
   color: var(--text-dark);
   line-height: 1.65;
 }
 
 .section {
-  padding: 90px 0 80px;
+  padding: 90px 0;
+  /* background: var(--cream); */
 }
 .section-alt {
   background: var(--cream-dark);
 }
 .section-dark {
   background: var(--cream-dark);
-  color: var(--cream);
+  color: var(--text-dark);
+  position: relative;
+}
+.section-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto auto 50%;
+  width: min(360px, 70vw);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(94, 139, 74, 0.28), transparent);
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -1765,16 +1797,15 @@ body {
   margin-bottom: 10px;
 }
 .sec-head h2 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;
-  /* color: var(--green-dark); */
+  color: var(--green-dark);
   line-height: 1.2;
   margin-bottom: 14px;
 }
 .section-dark .sec-head h2 {
-  color: black;
-  /* background: black; */
+  color: var(--green-dark);
 }
 .sec-head p {
   font-size: 15px;
@@ -1811,9 +1842,9 @@ body {
   gap: 24px;
 }
 .disease-card {
-  background: var(--white);
-  border: 1px solid #e0d6bf;
-  border-radius: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--soft-radius);
   padding: 32px 22px 28px;
   text-align: center;
   transition:
@@ -1837,9 +1868,9 @@ body {
   transition: transform 0.35s ease;
 }
 .disease-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(45, 80, 22, 0.12);
-  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: var(--soft-shadow);
+  border-color: rgba(94, 139, 74, 0.28);
 }
 .disease-card:hover::before {
   transform: scaleX(1);
@@ -1870,7 +1901,7 @@ body {
 }
 
 .disease-card h3 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--green-dark);
@@ -1899,14 +1930,20 @@ body {
 }
 
 .treat-category {
-  background: var(--white);
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: var(--soft-radius);
   padding: 30px 28px;
-  border: 1px solid #e0d6bf;
-  transition: box-shadow 0.3s;
+  border: 1px solid #eee5d9;
+  box-shadow: var(--soft-shadow);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 .treat-category:hover {
-  box-shadow: 0 10px 32px rgba(45, 80, 22, 0.1);
+  transform: translateY(-4px);
+  border-color: rgba(94, 139, 74, 0.26);
+  box-shadow: 0 14px 30px rgba(94, 139, 74, 0.12);
 }
 
 .treat-cat-header {
@@ -1920,8 +1957,9 @@ body {
 .cat-icon {
   width: 46px;
   height: 46px;
-  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
-  border-radius: 10px;
+  background: rgba(94, 139, 74, 0.1);
+  border: 1px solid rgba(94, 139, 74, 0.18);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1930,10 +1968,10 @@ body {
 .cat-icon svg {
   width: 45px;
   height: 45px;
-  fill: var(--gold-light);
+  fill: var(--green-dark);
 }
 .treat-cat-header h3 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--green-dark);
@@ -1981,18 +2019,19 @@ body {
 
 .treat-banner {
   grid-column: 1 / -1;
-  background: linear-gradient(120deg, var(--green-dark) 0%, #3a6a1e 100%);
-  border-radius: 10px;
+  background: var(--green-mid);
+  border-radius: 18px;
   padding: 30px 36px;
   display: flex;
   align-items: center;
   gap: 20px;
   color: var(--cream);
+  box-shadow: 0 8px 20px rgba(94, 139, 74, 0.12);
 }
 .treat-banner-icon {
   width: 60px;
   height: 60px;
-  background: rgba(200, 169, 110, 0.15);
+  background: rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2000,19 +2039,19 @@ body {
   flex-shrink: 0;
 }
 .treat-banner-icon svg {
-  fill: var(--gold);
+  color: #fffdf8;
   width: 30px;
   height: 30px;
 }
 .treat-banner h3 {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(18px, 2.5vw, 24px);
-  color: var(--gold-light);
+  color: #fffdf8;
   margin-bottom: 5px;
 }
 .treat-banner p {
   font-size: 14px;
-  color: #b8cca0;
+  color: rgba(255, 255, 255, 0.86);
   line-height: 1.6;
 }
 
@@ -2020,44 +2059,51 @@ body {
 .pancha-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  /* gap: 22px; */
+  gap: 24px;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
 }
 .pancha-card {
-  /* background: rgba(255, 255, 255, 0.06); */
-  background: linear-gradient(120deg, var(--green-dark) 0%, #3a6a1e 100%);
-  border: 1px solid rgba(200, 169, 110, 0.25);
-  border-radius: 10px;
-  padding: 28px 20px 24px;
+  background: rgba(94, 139, 74, 0.08);
+  border: 1px solid rgba(94, 139, 74, 0.28);
+  border-radius: var(--soft-radius);
+  padding: 10px;
   text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--soft-shadow);
   transition:
-    background 0.3s,
-    border-color 0.3s,
-    transform 0.3s;
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: default;
 }
 .pancha-card:hover {
-  /* background: rgba(200, 169, 110, 0.1); */
-  background: linear-gradient(120deg, var(--green-dark) 0%, #3a6a1e 100%);
-  border-color: var(--gold);
-  /* transform: translateY(-5px); */
+  background: rgba(94, 139, 74, 0.12);
+  border-color: rgba(94, 139, 74, 0.44);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(94, 139, 74, 0.14);
 }
 .pancha-card .p-num {
   font-size: 11px;
   letter-spacing: 2px;
-  color: var(--gold);
+  color: var(--green-mid);
   font-weight: 600;
   margin-bottom: 10px;
 }
 .pancha-card h3 {
-  font-family: 'Archivo', sans-serif;
-  font-size: 16px;
-  color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--green-dark);
   margin-bottom: 8px;
 }
 .pancha-card p {
-  font-size: 12.5px;
-  color: #a0b888;
-  line-height: 1.55;
+  font-size: 13px;
+  color: #5f5b56;
+  line-height: 1.6;
 }
 
 @media (max-width: 600px) {

@@ -1,0 +1,9 @@
+.ayur-ban-leaf2 img:nth-child(1) {
+    bottom: 0;
+    right: 0;
+    /* opacity: 0.50; */
+}
+
+.ayur-ban-leaf2 img {
+  position: absolute;
+}

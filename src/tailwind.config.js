@@ -4,19 +4,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        archivo: ['Archivo', 'sans-serif'],
+        archivo: ['Inter', 'sans-serif'],
+        heading: ['Cormorant Garamond', 'serif'],
       },
       colors: {
         ayur: {
-          primary: '#cd8973',
+          primary: '#d89a7a',
           white: '#ffffff',
-          banheading: '#222222',
-          para: '#797979',
-          text: '#ababab',
-          border: '#ffebe4',
+          banheading: '#2b2b2b',
+          para: '#6f665e',
+          text: '#6f665e',
+          border: '#e7dfd3',
           formtext: '#dbd1d9',
-          footerbg: '#220f08',
-          footertext: '#e4d4cf',
+          footerbg: '#2f3e2c',
+          footertext: 'rgba(255, 255, 255, 0.82)',
         },
       },
       boxShadow: {
