@@ -12,12 +12,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "mr": "src/locale/messages.mr.xlf"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -32,9 +26,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "localize": true,
-            "i18nMissingTranslation": "error"
+            ]
           },
           "configurations": {
             "production": {
@@ -56,12 +48,6 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "mr": {
-              "localize": [
-                "mr"
-              ],
-              "outputPath": "dist/raseshwar-web-mr"
             }
           },
           "defaultConfiguration": "production"
@@ -74,9 +60,6 @@
             },
             "development": {
               "buildTarget": "raseshwar-web:build:development"
-            },
-            "mr": {
-              "buildTarget": "raseshwar-web:build:mr"
             }
           },
           "defaultConfiguration": "development"

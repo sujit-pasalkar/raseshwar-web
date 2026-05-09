@@ -16,31 +16,31 @@ export class ServicesComponent implements OnInit, OnDestroy {
     this.products.set([
       {
         imageId: 'care-img1',
-        name: $localize `:@@serviceEyeCare:Eye care`,
+        name: 'Eye care',
       },
       {
         imageId: 'care-img2',
-        name: $localize `:@@serviceHairCare:Hair Care`,
+        name: 'Hair Care',
       },
       {
         imageId: 'care-img3',
-        name: $localize `:@@serviceSkinCare:Skin Care`,
+        name: 'Skin Care',
       },
       {
         imageId: 'care-img5',
-        name: $localize `:@@serviceWomensHealth:Women's Health`,
+        name: "Women's Health",
       },
       {
         imageId: 'mens-health',
-        name: $localize `:@@serviceMensHealth:Men's Health`,
+        name: "Men's Health",
       },
       {
         imageId: 'care-img6',
-        name: $localize `:@@serviceMemoryHealth:Memory Health`,
+        name: 'Memory Health',
       },
       {
         imageId: 'care-img7',
-        name: $localize `:@@serviceSkinCare:Skin Care`,
+        name: 'Skin Care',
       },
     ]);
 
