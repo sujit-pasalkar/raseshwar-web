@@ -5,28 +5,63 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="ayur-heading-wrap">
                     <h5>Medicine</h5>
-                    <h3>Our Top Products</h3>
+                    <h3>{{ preview ? 'Our Top Products' : 'All Products' }}</h3>
                 </div>
             </div>
         </div>
+
+        <div *ngIf="!preview" class="mb-8 grid grid-cols-1 gap-4 rounded-lg border border-[#e8ddd3] bg-white/80 p-4 md:grid-cols-3">
+            <label class="flex flex-col gap-2 text-left text-sm font-medium text-[#5a3f33]">
+                Search by name
+                <input
+                    type="search"
+                    [(ngModel)]="searchText"
+                    placeholder="Search products"
+                    class="min-h-[44px] rounded-md border border-[#d8c8bd] bg-white px-3 text-[#222] outline-none focus:border-[#cd8973]">
+            </label>
+
+            <label class="flex flex-col gap-2 text-left text-sm font-medium text-[#5a3f33]">
+                Filter by price
+                <select
+                    [(ngModel)]="priceFilter"
+                    class="min-h-[44px] rounded-md border border-[#d8c8bd] bg-white px-3 text-[#222] outline-none focus:border-[#cd8973]">
+                    <option value="all">All prices</option>
+                    <option value="under100">Under Rs. 100</option>
+                    <option value="100to200">Rs. 100 - Rs. 200</option>
+                    <option value="above200">Above Rs. 200</option>
+                </select>
+            </label>
+
+            <label class="flex flex-col gap-2 text-left text-sm font-medium text-[#5a3f33]">
+                Filter by offer
+                <select
+                    [(ngModel)]="offerFilter"
+                    class="min-h-[44px] rounded-md border border-[#d8c8bd] bg-white px-3 text-[#222] outline-none focus:border-[#cd8973]">
+                    <option value="all">All offers</option>
+                    <option value="10">10% Off or more</option>
+                    <option value="20">20% Off or more</option>
+                    <option value="30">30% Off or more</option>
+                </select>
+            </label>
+        </div>
+
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-            <div class="ayur-tpro-box">
+            <div class="ayur-tpro-box" *ngFor="let product of visibleProducts">
                 <div class="ayur-tpro-img">
-                    <!-- todo: add your image here -->
-                    <img src="/chavanprash.jpg"
-                        alt="img">
+                    <img [src]="product.image" [alt]="product.name">
                     <div class="ayur-tpro-sale">
-                        <p>30% Off</p>
+                        <p>{{ product.offer }}% Off</p>
                     </div>
                 </div>
                 <div class="ayur-tpro-text">
-                    <h3>Chavanprash</h3>
+                    <h3>{{ product.name }}</h3>
                     <div class="ayur-tpro-price">
-                        <p class="gen-8yO-ayur-cares"><del>₹200</del>₹150</p>
-
+                        <p class="gen-8yO-ayur-cares">
+                            <del>Rs. {{ product.originalPrice }}</del>Rs. {{ product.price }}
+                        </p>
                     </div>
                     <div class="ayur-tpro-btn flex justify-end">
-                        <a href="cart.html"
+                        <a (click)="orderNow(product.name, product.price)"
                             class="flex gap-1 items-center min-w-[145px] rounded-2xl justify-center bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
                             <span>
                                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none"
@@ -35,69 +70,23 @@
                                         d="M10 1C5.029 1 1 5.029 1 10C1 11.753 1.487 13.393 2.333 14.787L1.054 18.946C0.972 19.204 1.249 19.442 1.496 19.324L5.842 17.271C7.127 18.044 8.612 18.5 10.2 18.5C15.171 18.5 19.2 14.471 19.2 9.5C19.2 5.358 16.142 1.923 12.079 1.183C11.408 1.062 10.712 1 10 1ZM7.35 6.2C7.18 6.2 6.964 6.267 6.764 6.483C6.528 6.737 5.9 7.322 5.9 8.519C5.9 9.716 6.784 10.873 6.9 11.032C7.017 11.191 8.584 13.692 11.025 14.698C13.046 15.531 13.467 15.37 13.917 15.331C14.367 15.292 15.367 14.757 15.583 14.202C15.8 13.646 15.8 13.171 15.733 13.072C15.667 12.973 15.517 12.907 15.292 12.8C15.067 12.693 13.892 12.118 13.683 12.044C13.475 11.971 13.325 11.934 13.175 12.17C13.025 12.406 12.567 12.94 12.433 13.093C12.3 13.246 12.167 13.266 11.942 13.153C11.717 13.04 10.991 12.8 10.126 12.032C9.45 11.433 8.994 10.693 8.867 10.463C8.739 10.234 8.854 10.109 8.967 9.997C9.069 9.896 9.192 9.733 9.308 9.6C9.425 9.467 9.463 9.373 9.533 9.227C9.604 9.08 9.568 8.947 9.508 8.833C9.448 8.72 9.008 7.616 8.813 7.133C8.63 6.676 8.44 6.692 8.292 6.683C8.15 6.675 7.983 6.667 7.733 6.667C7.617 6.667 7.508 6.667 7.35 6.2Z"
                                         fill="green" />
                                 </svg>
-                            </span> <span>Order Now</span> </a>
+                            </span>
+                            <span>Order Now</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="ayur-tpro-box">
-                <div class="ayur-tpro-img">
-                    <!-- todo: add your image here -->
-                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img1.png"
-                        alt="img">
-                    <div class="ayur-tpro-sale">
-                        <p>30% Off</p>
-                    </div>
-                </div>
-                <div class="ayur-tpro-text">
-                    <h3>Black Organic Tea</h3>
-                    <div class="ayur-tpro-price">
-                        <p class="gen-8yO-ayur-cares"><del>₹100</del>₹50</p>
+        </div>
 
-                    </div>
-                    <div class="ayur-tpro-btn flex justify-end">
-                        <a href="cart.html"
-                            class="flex gap-1 items-center min-w-[145px] rounded-2xl justify-center bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
-                            <span>
-                                <svg width="25" height="25" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10 1C5.029 1 1 5.029 1 10C1 11.753 1.487 13.393 2.333 14.787L1.054 18.946C0.972 19.204 1.249 19.442 1.496 19.324L5.842 17.271C7.127 18.044 8.612 18.5 10.2 18.5C15.171 18.5 19.2 14.471 19.2 9.5C19.2 5.358 16.142 1.923 12.079 1.183C11.408 1.062 10.712 1 10 1ZM7.35 6.2C7.18 6.2 6.964 6.267 6.764 6.483C6.528 6.737 5.9 7.322 5.9 8.519C5.9 9.716 6.784 10.873 6.9 11.032C7.017 11.191 8.584 13.692 11.025 14.698C13.046 15.531 13.467 15.37 13.917 15.331C14.367 15.292 15.367 14.757 15.583 14.202C15.8 13.646 15.8 13.171 15.733 13.072C15.667 12.973 15.517 12.907 15.292 12.8C15.067 12.693 13.892 12.118 13.683 12.044C13.475 11.971 13.325 11.934 13.175 12.17C13.025 12.406 12.567 12.94 12.433 13.093C12.3 13.246 12.167 13.266 11.942 13.153C11.717 13.04 10.991 12.8 10.126 12.032C9.45 11.433 8.994 10.693 8.867 10.463C8.739 10.234 8.854 10.109 8.967 9.997C9.069 9.896 9.192 9.733 9.308 9.6C9.425 9.467 9.463 9.373 9.533 9.227C9.604 9.08 9.568 8.947 9.508 8.833C9.448 8.72 9.008 7.616 8.813 7.133C8.63 6.676 8.44 6.692 8.292 6.683C8.15 6.675 7.983 6.667 7.733 6.667C7.617 6.667 7.508 6.667 7.35 6.2Z"
-                                        fill="green" />
-                                </svg>
-                            </span> <span>Order Now</span> </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ayur-tpro-box">
-                <div class="ayur-tpro-img">
-                    <!-- todo: add your image here -->
-                    <img src="https://kamleshyadav.com/html/pure-ayurveda/html/pureayurveda-demo/assets/images/product-img1.png"
-                        alt="img">
-                    <div class="ayur-tpro-sale">
-                        <p>30% Off</p>
-                    </div>
-                </div>
-                <div class="ayur-tpro-text">
-                    <h3>Black Organic Tea</h3>
-                    <div class="ayur-tpro-price">
-                        <p class="gen-8yO-ayur-cares"><del>₹100</del>₹50</p>
+        <div *ngIf="!visibleProducts.length" class="py-10 text-center text-[#5a3f33]">
+            No products found.
+        </div>
 
-                    </div>
-                    <div class="ayur-tpro-btn flex justify-end">
-                        <a (click)="orderNow('Black Organic Tea', '₹50')"
-                            class="flex gap-1 items-center min-w-[145px] rounded-2xl justify-center bg-[#cd8973] min-h-[45px] border border-[#f2efec] text-white font-medium text-center capitalize py-[9px] relative overflow-hidden z-[1] transition-all duration-300 hover:text-white after:absolute after:content-[''] after:block after:top-1/2 after:left-1/2 after:w-full after:h-0 after:rounded-[15px] after:bg-[#222222] after:-z-[1] after:transition-all after:duration-700 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45 hover:after:h-[380%]">
-                            <span>
-                                <svg width="25" height="25" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10 1C5.029 1 1 5.029 1 10C1 11.753 1.487 13.393 2.333 14.787L1.054 18.946C0.972 19.204 1.249 19.442 1.496 19.324L5.842 17.271C7.127 18.044 8.612 18.5 10.2 18.5C15.171 18.5 19.2 14.471 19.2 9.5C19.2 5.358 16.142 1.923 12.079 1.183C11.408 1.062 10.712 1 10 1ZM7.35 6.2C7.18 6.2 6.964 6.267 6.764 6.483C6.528 6.737 5.9 7.322 5.9 8.519C5.9 9.716 6.784 10.873 6.9 11.032C7.017 11.191 8.584 13.692 11.025 14.698C13.046 15.531 13.467 15.37 13.917 15.331C14.367 15.292 15.367 14.757 15.583 14.202C15.8 13.646 15.8 13.171 15.733 13.072C15.667 12.973 15.517 12.907 15.292 12.8C15.067 12.693 13.892 12.118 13.683 12.044C13.475 11.971 13.325 11.934 13.175 12.17C13.025 12.406 12.567 12.94 12.433 13.093C12.3 13.246 12.167 13.266 11.942 13.153C11.717 13.04 10.991 12.8 10.126 12.032C9.45 11.433 8.994 10.693 8.867 10.463C8.739 10.234 8.854 10.109 8.967 9.997C9.069 9.896 9.192 9.733 9.308 9.6C9.425 9.467 9.463 9.373 9.533 9.227C9.604 9.08 9.568 8.947 9.508 8.833C9.448 8.72 9.008 7.616 8.813 7.133C8.63 6.676 8.44 6.692 8.292 6.683C8.15 6.675 7.983 6.667 7.733 6.667C7.617 6.667 7.508 6.667 7.35 6.2Z"
-                                        fill="green" />
-                                </svg>
-                            </span> <span>Order Now</span> </a>
-                            
-                    </div>
-                </div>
-            </div>
+        <div *ngIf="preview" class="mt-10 flex justify-center">
+            <a routerLink="/products"
+                class="flex min-h-[46px] min-w-[190px] items-center justify-center rounded-2xl border border-[#cd8973] bg-[#cd8973] px-6 py-3 text-center font-medium capitalize text-white transition-all duration-300 hover:bg-[#222222] hover:text-white">
+                Show More Products
+            </a>
         </div>
     </div>
     <div class="ayur-bgshape ayur-tpro-bgshape">
