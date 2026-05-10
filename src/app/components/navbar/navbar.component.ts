@@ -10,7 +10,6 @@ import { NavHideOnScrollDirective } from '../../directives/navHideOnScroll.direc
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild('menuBtn') menuBtn!: ElementRef;
   @ViewChild('sidebar') sidebar!: ElementRef;
   @ViewChild('overlay') overlay!: ElementRef;
 
@@ -26,7 +25,7 @@ export class NavbarComponent implements OnInit {
 
   private updateActiveLink(): void {
     const sections = ['home', 'about', 'services', 'products', 'contact'];
-    
+
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -40,36 +39,33 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  
-   toggleSidebar() {
-    this.menuBtn.nativeElement.addEventListener('click', () => {
-      this.open = !this.open;
+  toggleSidebar() {
+    console.log('in');
 
-      if (this.open) {
-        // sidebar open
-        this.sidebar.nativeElement.style.left = '0px';
-        // this.overlay.nativeElement.classList.remove('hidden');
+    this.open = !this.open;
 
-        // animate to close icon
-        this.l1.nativeElement.style.transform = 'rotate(45deg)';
-        this.l1.nativeElement.style.top = '16px';
-        this.l2.nativeElement.style.opacity = '0';
+    if (this.open) {
+      // sidebar open
+      this.sidebar.nativeElement.style.left = '0px';
 
-        this.l3.nativeElement.style.transform = 'rotate(-45deg)';
-        this.l3.nativeElement.style.top = '16px';
-      } else {
-        // sidebar close
-        this.sidebar.nativeElement.style.left = '-260px';
-        // this.overlay.nativeElement.classList.add('hidden');
-        // back to hamburger
-        this.l1.nativeElement.style.transform = 'rotate(0)';
-        this.l1.nativeElement.style.top = '8px';
+      // animate to close icon
+      this.l1.nativeElement.style.transform = 'rotate(45deg)';
+      this.l1.nativeElement.style.top = '16px';
+      this.l2.nativeElement.style.opacity = '0';
 
-        this.l2.nativeElement.style.opacity = '1';
+      this.l3.nativeElement.style.transform = 'rotate(-45deg)';
+      this.l3.nativeElement.style.top = '16px';
+    } else {
+      // sidebar close
+      this.sidebar.nativeElement.style.left = '-260px';
+      // back to hamburger
+      this.l1.nativeElement.style.transform = 'rotate(0)';
+      this.l1.nativeElement.style.top = '8px';
 
-        this.l3.nativeElement.style.transform = 'rotate(0)';
-        this.l3.nativeElement.style.top = '24px';
-      }
-    });
+      this.l2.nativeElement.style.opacity = '1';
+
+      this.l3.nativeElement.style.transform = 'rotate(0)';
+      this.l3.nativeElement.style.top = '24px';
+    }
   }
 }
